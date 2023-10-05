@@ -81,7 +81,7 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-users"></i>Details</a>
                         <ul class="sub-menu children dropdown-menu">
                             <li><i class="fa fa-user"></i><a href="">Requested Member</a></li>
-                            <li><i class="fa fa-users"></i><a href="memberView">Total Member</a></li>
+                            <li><i class="fa fa-users"></i><a href="">Total Member</a></li>
                         </ul>
                     </li>
                     <li class="menu-title">Meal</li><!--------- /.menu-title --------->
@@ -258,7 +258,7 @@
                                 <ol class="breadcrumb text-right">
                                     <li><a href="#">Dashboard</a></li>
                                     <li><a href="#">Member</a></li>
-                                    <li class="active">Add Member</li>
+                                    <li class="active">Member Details</li>
                                 </ol>
                             </div>
                         </div>
@@ -268,6 +268,8 @@
         </div>
         <!----------------------- End Breadcrumb ------------------------------------>
 
+
+
         <!--------------------------------- Start Content ----------------------------->
                     <div class="col-lg-11 float-left p-3 3 mx-5 ">
                         <div class="card justify-content-center">
@@ -276,23 +278,23 @@
                             </div>
                             <div class="card-body card-block">
                                 
-                            
-                            <form action="memberSignup" method="POST" enctype="multipart/form-data" class="form-horizontal">
+                            <form action="/member/update/<?= $member['id'] ?>" method="POST" enctype="multipart/form-data" class="form-horizontal">
+                            <div class="col-12 col-md-9"><input type="hidden" id="text-input" name="_method" value="PUT" class="form-control"></div>
                                 <div class="row form-group">
                                     <div class="col col-md-3"><label for="text-input" class=" form-control-label">Name :</label></div>
-                                    <div class="col-12 col-md-9"><input type="text" id="text-input" name="name" placeholder="enter your name" class="form-control"></div>
+                                    <div class="col-12 col-md-9"><input type="text" id="text-input" name="name" value="<?= $member['name'] ?>" class="form-control"></div>
                                 </div>
                                 <div class="row form-group">
                                     <div class="col col-md-3"><label for="email-input" class=" form-control-label">Email :</label></div>
-                                    <div class="col-12 col-md-9"><input type="email" id="email-input" name="email" placeholder="Please enter your email" class="form-control"></div>
+                                    <div class="col-12 col-md-9"><input type="email" id="email-input" name="email" value="<?= $member['email'] ?>" class="form-control"></div>
                                 </div>
                                 <div class="row form-group">
                                     <div class="col col-md-3"><label for="password-input" class=" form-control-label">Password :</label></div>
-                                    <div class="col-12 col-md-9"><input type="password" id="password-input" name="password" placeholder="Please enter a complex password" class="form-control"></div>
+                                    <div class="col-12 col-md-9"><input type="password" id="password-input" name="password" value="<?= $member['password'] ?>" class="form-control"></div>
                                 </div>
                                 <div class="row form-group">
                                     <div class="col col-md-3"><label for="textarea-input" class=" form-control-label">Address :</label></div>
-                                    <div class="col-12 col-md-9"><textarea name="address" id="textarea-input" rows="5" placeholder="Enter your address" class="form-control"></textarea></div>
+                                    <div class="col-12 col-md-9"><textarea name="address" id="textarea-input" rows="5" value="<?= $member['address'] ?>" class="form-control"></textarea></div>
                                 </div>
                                 <div class="row form-group">
                                     <div class="col col-md-3"><label class=" form-control-label">Gender :</label></div>
@@ -327,6 +329,7 @@
                             </div>
                         </div>
                     </div>
+
 
 
         <div class="clearfix"></div>

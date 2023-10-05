@@ -5,21 +5,21 @@
         <div class="carousel-item active">
           <div class="img_container">
             <div class="img-box">
-              <img src="../public/assetF/images/slider-bg-Copy.jpg" class="" alt="...">
+              <img src="<?=base_url()?>assetF/images/slider-bg-Copy.jpg" class="" alt="...">
             </div>
           </div>
         </div>
         <div class="carousel-item">
           <div class="img_container">
             <div class="img-box">
-              <img src="../public/assetF/images/slider-bg.jpg" class="" alt="...">
+              <img src="<?=base_url()?>assetF/images/slider-bg.jpg" class="" alt="...">
             </div>
           </div>
         </div>
         <div class="carousel-item">
           <div class="img_container">
             <div class="img-box">
-              <img src="../public/assetF/images/slider-bg.jpg" class="" alt="...">
+              <img src="<?=base_url()?>assetF/images/slider-bg.jpg" class="" alt="...">
             </div>
           </div>
         </div>
@@ -64,7 +64,7 @@
       <div class="row">
         <div class="col-md-6">
           <div class="img-box">
-            <img src="../public/assetF/images/about-img.jpg" alt="">
+            <img src="<?=base_url()?>assetF/images/about-img.jpg" alt="">
           </div>
         </div>
         <div class="col-md-6">
@@ -100,48 +100,48 @@
       <div class="row">
         <div class=" col-sm-8 col-md-6 px-0">
           <div class="img-box">
-            <img src="../public/assetF/images/g1.jpg" alt="">
-            <a href="../public/assetF/images/g1.jpg" data-toggle="lightbox" data-gallery="gallery">
+            <img src="<?=base_url()?>assetF/images/g1.jpg" alt="">
+            <a href="<?=base_url()?>assetF/images/g1.jpg" data-toggle="lightbox" data-gallery="gallery">
               <i class="fa fa-picture-o" aria-hidden="true"></i>
             </a>
           </div>
         </div>
         <div class="col-sm-4 col-md-3 px-0">
           <div class="img-box">
-            <img src="../public/assetF/images/g2.jpg" alt="">
-            <a href="../public/assetF/images/g2.jpg" data-toggle="lightbox" data-gallery="gallery">
+            <img src="<?=base_url()?>assetF/images/g2.jpg" alt="">
+            <a href="<?=base_url()?>assetF/images/g2.jpg" data-toggle="lightbox" data-gallery="gallery">
               <i class="fa fa-picture-o" aria-hidden="true"></i>
             </a>
           </div>
         </div>
         <div class="col-sm-6 col-md-3 px-0">
           <div class="img-box">
-            <img src="../public/assetF/images/g3.jpg" alt="">
-            <a href="../public/assetF/images/g3.jpg" data-toggle="lightbox" data-gallery="gallery">
+            <img src="<?=base_url()?>assetF/images/g3.jpg" alt="">
+            <a href="<?=base_url()?>assetF/images/g3.jpg" data-toggle="lightbox" data-gallery="gallery">
               <i class="fa fa-picture-o" aria-hidden="true"></i>
             </a>
           </div>
         </div>
         <div class="col-sm-6 col-md-3 px-0">
           <div class="img-box">
-            <img src="../public/assetF/images/g4.jpg" alt="">
-            <a href="../public/assetF/images/g4.jpg" data-toggle="lightbox" data-gallery="gallery">
+            <img src="<?=base_url()?>assetF/images/g4.jpg" alt="">
+            <a href="<?=base_url()?>assetF/images/g4.jpg" data-toggle="lightbox" data-gallery="gallery">
               <i class="fa fa-picture-o" aria-hidden="true"></i>
             </a>
           </div>
         </div>
         <div class="col-sm-4 col-md-3 px-0">
           <div class="img-box">
-            <img src="../public/assetF/images/g5.jpg" alt="">
-            <a href="../public/assetF/images/g5.jpg" data-toggle="lightbox" data-gallery="gallery">
+            <img src="<?=base_url()?>assetF/images/g5.jpg" alt="">
+            <a href="<?=base_url()?>assetF/images/g5.jpg" data-toggle="lightbox" data-gallery="gallery">
               <i class="fa fa-picture-o" aria-hidden="true"></i>
             </a>
           </div>
         </div>
         <div class="col-sm-8 col-md-6 px-0">
           <div class="img-box">
-            <img src="../public/assetF/images/g6.jpg" alt="">
-            <a href="../public/assetF/images/g6.jpg" data-toggle="lightbox" data-gallery="gallery">
+            <img src="<?=base_url()?>assetF/images/g6.jpg" alt="">
+            <a href="<?=base_url()?>assetF/images/g6.jpg" data-toggle="lightbox" data-gallery="gallery">
               <i class="fa fa-picture-o" aria-hidden="true"></i>
             </a>
           </div>
@@ -171,7 +171,7 @@
         <div class="col-md-6 col-lg-4 mx-auto">
           <div class="box">
             <div class="img-box">
-              <img src="../public/assetF/images/s1.jpg" alt="">
+              <img src="<?=base_url()?>assetF/images/s1.jpg" alt="">
             </div>
             <div class="detail-box">
               <h5>
@@ -189,7 +189,7 @@
         <div class="col-md-6 col-lg-4 mx-auto">
           <div class="box">
             <div class="img-box">
-              <img src="../public/assetF/images/00.jpg" alt="">
+              <img src="<?=base_url()?>assetF/images/00.jpg" alt="">
             </div>
             <div class="detail-box">
               <h5>
@@ -207,7 +207,7 @@
         <div class="col-md-6 col-lg-4 mx-auto">
           <div class="box">
             <div class="img-box">
-              <img src="../public/assetF/images/s3.jpg" alt="">
+              <img src="<?=base_url()?>assetF/images/s3.jpg" alt="">
             </div>
             <div class="detail-box">
               <h5>
@@ -244,7 +244,7 @@
         <div class="col-lg-6 ">
           <div class="box">
             <div class="img-box">
-              <img src="../public/assetF/images/gym.png" alt="">
+              <img src="<?=base_url()?>assetF/images/gym.png" alt="">
             </div>
             <div class="detail-box">
               <h5>
@@ -262,7 +262,7 @@
         <div class="col-lg-6 ">
           <div class="box">
             <div class="img-box">
-              <img src="../public/assetF/images/f.jpg" alt="">
+              <img src="<?=base_url()?>assetF/images/f.jpg" alt="">
             </div>
             <div class="detail-box">
               <h5>
@@ -299,7 +299,7 @@
               <div class="col-md-11 col-lg-10 mx-auto">
                 <div class="box">
                   <div class="img-box">
-                    <img src="../public/assetF/images/testimonials-1.jpg" alt="" />
+                    <img src="<?=base_url()?>assetF/images/testimonials-1.jpg" alt="" />
                   </div>
                   <div class="detail-box">
                     <div class="name">
@@ -323,7 +323,7 @@
               <div class="col-md-11 col-lg-10 mx-auto">
                 <div class="box">
                   <div class="img-box">
-                    <img src="../public/assetF/images/testimonials-3.jpg" alt="" />
+                    <img src="<?=base_url()?>assetF/images/testimonials-3.jpg" alt="" />
                   </div>
                   <div class="detail-box">
                     <div class="name">
@@ -347,7 +347,7 @@
               <div class="col-md-11 col-lg-10 mx-auto">
                 <div class="box">
                   <div class="img-box">
-                    <img src="../public/assetF/images/client.jpg" alt="" />
+                    <img src="<?=base_url()?>assetF/images/client.jpg" alt="" />
                   </div>
                   <div class="detail-box">
                     <div class="name">

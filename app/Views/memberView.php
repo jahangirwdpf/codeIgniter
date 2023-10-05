@@ -268,6 +268,8 @@
         </div>
         <!----------------------- End Breadcrumb ------------------------------------>
 
+
+
         <!--------------------------------- Start Content ----------------------------->
         <div class="content">
             <div class="animated fadeIn">
@@ -285,52 +287,23 @@
                                             <th>Name</th>
                                             <th>Email</th>
                                             <th>Address</th>
-                                            <th>Mobile</th>
+                                            <th>Gender</th>
+                                            <th colspan='2'>Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td>Tiger Nixon</td>
-                                            <td>tg@gmail.com</td>
-                                            <td>Dhaka</td>
-                                            <td>01727280318</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Tiger Nixon</td>
-                                            <td>tg@gmail.com</td>
-                                            <td>Dhaka</td>
-                                            <td>01727280318</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Tiger Nixon</td>
-                                            <td>tg@gmail.com</td>
-                                            <td>Dhaka</td>
-                                            <td>01727280318</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Tiger Nixon</td>
-                                            <td>tg@gmail.com</td>
-                                            <td>Dhaka</td>
-                                            <td>01727280318</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Tiger Nixon</td>
-                                            <td>tg@gmail.com</td>
-                                            <td>Dhaka</td>
-                                            <td>01727280318</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Tiger Nixon</td>
-                                            <td>tg@gmail.com</td>
-                                            <td>Dhaka</td>
-                                            <td>01727280318</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Tiger Nixon</td>
-                                            <td>tg@gmail.com</td>
-                                            <td>Dhaka</td>
-                                            <td>01727280318</td>
-                                        </tr>
+                                        <?php if ($member) :?>
+                                            <?php foreach ($member as $row) :?>
+                                                <tr>
+                                                    <td><?= $row['name']?></td>
+                                                    <td><?= $row['email']?></td>
+                                                    <td><?= $row['address']?></td>
+                                                    <td><?= $row['gender']?></td>
+                                                    <td><a href="member/edit<?= $row['id']?>" class="btn btn-success">Edit</a</td>
+                                                    <td><a href="member/delete<?= $row['id']?>" class="btn btn-success">Delete</a</td>
+                                                </tr>
+                                            <?php endforeach; ?>
+                                        <?php endif; ?>
                                     </tbody>
                                 </table>
                             </div>
