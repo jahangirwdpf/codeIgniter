@@ -3,24 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="<?=base_url()?>assetF/images/favicon.png" type="image/gif" />
+    <link rel="icon" href="assetF/images/favicon.png" type="image/gif" />
   <title>Bachelor Point</title>
 
   <!-- bootstrap core css -->
-  <link rel="stylesheet" type="text/css" href="<?=base_url()?>assetF/css/bootstrap.css" />
+  <link rel="stylesheet" type="text/css" href="assetF/css/bootstrap.css" />
 
   <!-- fonts style -->
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet" />
 
   <!-- lightbox Gallery-->
-  <link rel="stylesheet" href="<?=base_url()?>assetF/css/ekko-lightbox.css" />
+  <link rel="stylesheet" href="assetF/css/ekko-lightbox.css" />
 
   <!-- font awesome style -->
-  <link href="<?=base_url()?>assetF/css/font-awesome.min.css" rel="stylesheet" />
+  <link href="assetF/css/font-awesome.min.css" rel="stylesheet" />
   <!-- Custom styles for this template -->
-  <link href="<?=base_url()?>assetF/css/style.css" rel="stylesheet" />
+  <link href="assetF/css/style.css" rel="stylesheet" />
   <!-- responsive style -->
-  <link href="<?=base_url()?>assetF/css/responsive.css" rel="stylesheet" />
+  <link href="assetF/css/responsive.css" rel="stylesheet" />
 </head>
 <body>
 <!-- header section strats -->
@@ -60,12 +60,12 @@
     <?= $this->renderSection('content')?>
 </body>
 <!-- jQery -->
-<script src="<?=base_url()?>assetF/js/jquery-3.4.1.min.js"></script>
+<script src="assetF/js/jquery-3.4.1.min.js"></script>
   <!-- bootstrap js -->
-  <script src="<?=base_url()?>assetF/js/bootstrap.js"></script>
+  <script src="assetF/js/bootstrap.js"></script>
   <!-- lightbox Gallery-->
-  <script src="<?=base_url()?>assetF/js/ekko-lightbox.min.js"></script>
+  <script src="assetF/js/ekko-lightbox.min.js"></script>
   <!-- custom js -->
-  <script src="<?=base_url()?>assetF/js/custom.js"></script>
+  <script src="assetF/js/custom.js"></script>
 </html>
 

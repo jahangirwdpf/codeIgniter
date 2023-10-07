@@ -34,7 +34,7 @@ class MemberAdd extends BaseController
         return view('memberView', $data);
     }
 
-    public function edit($member_id = null)
+    public function Edit($member_id = null)
     {
         $member = new UserModel();
         $data['member'] = $member->where('id', $member_id)->first();
@@ -53,7 +53,7 @@ class MemberAdd extends BaseController
             'gender'=>$this->request->getPost('gender')
         ];
 
-        $update->update($data);
+        $update->update($member_id, $data);
         return redirect('memberView');
     }
 
@@ -63,6 +63,4 @@ class MemberAdd extends BaseController
         $member->delete($member_id);
         return redirect('memberView');
     }
-
-
 }

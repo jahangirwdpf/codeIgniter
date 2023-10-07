@@ -1,5 +1,5 @@
 
-    <!-- footer section -->
+  <!-- footer section -->
   <footer class="footer_section">
     <div class="container">
       <p>
