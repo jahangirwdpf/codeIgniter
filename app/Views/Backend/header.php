@@ -110,10 +110,10 @@
                     </li>
                     <li class="menu-title">House Rent </li> <!------------- /.menu-title ----------------->
                     <li>
-                      <a href="widgets.html"> <i class="menu-icon fa fa-plus"></i>Add</a>
+                      <a href="<?= base_url(); ?>rentAdd"><i class="menu-icon fa fa-plus"></i>Add</a>
                     </li>
                     <li>
-                      <a href="widgets.html"> <i class="menu-icon fa fa-home"></i>View</a>
+                      <a href="<?= base_url(); ?>rentView"><i class="menu-icon fa fa-home"></i>View</a>
                     </li>
                     <li class="menu-title">Summary/ Reports</li><!--------- /.menu-title --------->
                     <li>

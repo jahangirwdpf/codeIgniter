@@ -1,7 +1,5 @@
 <?php
-
 use CodeIgniter\Router\RouteCollection;
-
 /**
  * @var RouteCollection $routes
  */
@@ -18,12 +16,17 @@ $routes->get('contact', 'Home::contact');
 $routes->get('dashboard', 'Dashboard::index');
 // Member Routes
 $routes->get('memberAdd', 'MemberAdd::index');
-$routes->get('memberView', 'MemberAdd::fetchmember');
 $routes->post('memberSignup', 'MemberAdd::memberSignup');
+$routes->get('memberView', 'MemberAdd::fetchmember');
 $routes->get('member/edit/(:num)', 'MemberAdd::Edit/$1');
 $routes->put('member/update/(:num)', 'MemberAdd::update/$1');
 $routes->get('member/delete/(:num)', 'MemberAdd::delete/$1');
 
-// Meal Routes
-
+// House Rent Routes
+$routes->get('rentAdd', 'HouseRentAdd::index');
+$routes->post('houseRent', 'HouseRentAdd::houseRent');
+$routes->get('rentView', 'HouseRentAdd::fetchrent');
+$routes->get('rent/edit/(:num)', 'HouseRentAdd::Edit/$1');
+$routes->put('rent/update/(:num)', 'HouseRentAdd::update/$1');
+$routes->get('rent/delete/(:num)', 'HouseRentAdd::delete/$1');
 

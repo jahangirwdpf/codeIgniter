@@ -7,13 +7,12 @@ class MemberAdd extends BaseController
 {
     public function index()
     {
-        return view('memberAdd');
+        return view('pages/member/memberAdd');
     }
-
 
     public function memberSignup()
     {
-        $signup=  new UserModel();
+        $signup =  new UserModel();
         $data = 
         [
             'name'=>$this->request->getPost('name'),
@@ -22,23 +21,24 @@ class MemberAdd extends BaseController
             'address'=>$this->request->getPost('address'),
             'gender'=>$this->request->getPost('gender')
         ];
-
         $signup->save($data);
         return redirect('memberAdd');
     }
 
+    // View All
     public function fetchmember()
     {
         $member = new UserModel();
         $data['member'] = $member->orderBy('id', 'DESC')->findAll();
-        return view('memberView', $data);
+        return view('pages/member/memberView', $data);
     }
 
+    // Edit
     public function Edit($member_id = null)
     {
         $member = new UserModel();
         $data['member'] = $member->where('id', $member_id)->first();
-        return view('memberEdit', $data);
+        return view('pages/member/memberEdit', $data);
     }
 
     public function update($member_id = null)
@@ -57,6 +57,7 @@ class MemberAdd extends BaseController
         return redirect('memberView');
     }
 
+    //delete
     public function delete($member_id = null)
     {
         $member = new UserModel();

@@ -10,15 +10,15 @@ class Home extends BaseController
     }
     public function about()
     {
-        return view('about');
+        return view('pages/about');
     }
     public function gallery()
     {
-        return view('gallery');
+        return view('pages/gallery');
     }
     public function contact()
     {
-        return view('contact');
+        return view('pages/contact');
     }
 }
 

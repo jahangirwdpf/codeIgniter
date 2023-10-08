@@ -1,13 +1,11 @@
 
-    <?= $this->extend('includes/nav');?>
+<?= $this->extend('frontend/nav');?>
+<?= $this->section('content');?>
 
-    <?= $this->section('content');?>
-
-        <div class="">
-                <?= $this->include('includes/content')?>
-            </div>
+    <div class="">
+            <?= $this->include('frontend/content')?>
         </div>
+    </div>
 
-    <?= $this->include('includes/footer');?>
-
-    <?= $this->endSection('content');?>
+<?= $this->include('frontend/footer');?>
+<?= $this->endSection('content');?>
