@@ -9,7 +9,7 @@ class HouseRentAdd extends BaseController
     {
         return view('pages/houseRent/rentAdd');
     }
-    
+
     public function houseRent()
     {
         $signup = new HouseRent();
@@ -52,7 +52,6 @@ class HouseRentAdd extends BaseController
             'bua'=>$this->request->getPost('bua'),
             'city'=>$this->request->getPost('city'),
         ];
-
         $update->update($rent_id, $data);
         return redirect('rentView');
     }
@@ -62,7 +61,5 @@ class HouseRentAdd extends BaseController
         $rent = new HouseRent();
         $rent->delete($rent_id);
         return redirect('rentView');
-    }
-    
-    
+    }  
 }

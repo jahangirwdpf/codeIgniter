@@ -14,6 +14,7 @@ $routes->get('contact', 'Home::contact');
 
 // Backend Routes
 $routes->get('dashboard', 'Dashboard::index');
+
 // Member Routes
 $routes->get('memberAdd', 'MemberAdd::index');
 $routes->post('memberSignup', 'MemberAdd::memberSignup');
@@ -29,4 +30,11 @@ $routes->get('rentView', 'HouseRentAdd::fetchrent');
 $routes->get('rent/edit/(:num)', 'HouseRentAdd::Edit/$1');
 $routes->put('rent/update/(:num)', 'HouseRentAdd::update/$1');
 $routes->get('rent/delete/(:num)', 'HouseRentAdd::delete/$1');
+
+
+//Deposite Routes
+$routes->get('depositeAdd', 'DepositeController::index');
+$routes->post('depositeSignup', 'DepositeController::dep1Add');
+$routes->get('depositeView', 'DepositeController::fetchdep');
+$routes->get('deposite/delete/(:num)', 'DepositeController::delete/$1');
 

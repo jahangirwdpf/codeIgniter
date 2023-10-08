@@ -1,4 +1,3 @@
-
 <?= $this->extend('Backend/header');?>
 <?= $this->section('content');?>
 <!--------------------------------- Start Content ----------------------------->
@@ -19,8 +18,8 @@
                         <div class="page-title">
                             <ol class="breadcrumb text-right">
                                 <li><a href="#">Dashboard</a></li>
-                                <li><a href="#">House Rent</a></li>
-                                <li class="active">View House Rent</li>
+                                <li><a href="#">Bristy</a></li>
+                                <li class="active">View Bristy</li>
                             </ol>
                         </div>
                     </div>
@@ -36,33 +35,26 @@
                     <div class="col-md-12">
                         <div class="card">
                             <div class="card-header">
-                                <strong class="card-title">House Rent Information (Details)</strong>
+                                <strong class="card-title">Deposite Information (Details)</strong>
                             </div>
                             <div class="card-body">
                                 <table id="bootstrap-data-table" class="table table-striped table-bordered">
                                     <thead>
                                         <tr class="text-center">
-                                            <th>House Rent</th>
-                                            <th>Gas Bill</th>
-                                            <th>Current Bill</th>
-                                            <th>Wifi Bill</th>
-                                            <th>Bua Bill</th>
-                                            <th>City Corpo. Bill</th>
+                                            <th>ID</th>
+                                            <th>Name</th>
+                                            <th>E-mail</th>
                                             <th colspan='2' >Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <?php if ($rent) :?>
-                                            <?php foreach ($rent as $row) :?>
+                                        <?php if($view) :?>
+                                            <?php foreach ($view as $row) :?>
                                                 <tr>
-                                                    <td><?= $row['rent']?></td>
-                                                    <td><?= $row['gas']?></td>
-                                                    <td><?= $row['current']?></td>
-                                                    <td><?= $row['wifi']?></td>
-                                                    <td><?= $row['bua']?></td>
-                                                    <td><?= $row['city']?></td>
-                                                    <td class="text-center"><a href="<?= base_url() ?>rent/edit/<?= $row['id']?>" class="btn btn-success">Edit</a</td>
-                                                    <td class="text-center"><a href="rent/delete/<?= $row['id']?>" class="btn btn-danger">Delete</a</td>
+                                                    <td><?= $row['id'] ?></td>
+                                                    <td><?= $row['name'] ?></td>
+                                                    <td><?= $row['email'] ?></td>
+                                                    <td><a href="deposite/delete/<?= $row['id'] ?>" class='btn btn-danger'>Delete</a></td>
                                                 </tr>
                                             <?php endforeach; ?>
                                         <?php endif; ?>
