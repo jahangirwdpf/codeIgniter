@@ -10,7 +10,7 @@ Class DepositeController extends BaseController {
     }
 
 //Add Data
-    public function dep1Add()
+    public function depoAdd()
     {
         $signUp = new DepositeModel();
         $data = 

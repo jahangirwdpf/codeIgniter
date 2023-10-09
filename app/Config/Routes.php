@@ -34,7 +34,7 @@ $routes->get('rent/delete/(:num)', 'HouseRentAdd::delete/$1');
 
 //Deposite Routes
 $routes->get('depositeAdd', 'DepositeController::index');
-$routes->post('depositeSignup', 'DepositeController::dep1Add');
 $routes->get('depositeView', 'DepositeController::fetchdep');
 $routes->get('deposite/delete/(:num)', 'DepositeController::delete/$1');
+$routes->post('depoAdd', 'DepositeController::depoAdd');
 

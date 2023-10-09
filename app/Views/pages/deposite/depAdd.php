@@ -18,8 +18,8 @@
                         <div class="page-title">
                             <ol class="breadcrumb text-right">
                                 <li><a href="#">Dashboard</a></li>
-                                <li><a href="#">Bristy</a></li>
-                                <li class="active">Add Bristy</li>
+                                <li><a href="#">Deposite</a></li>
+                                <li class="active">Add Deposite</li>
                             </ol>
                         </div>
                     </div>
@@ -32,10 +32,10 @@
         <div class="col-lg-11 float-left p-3 3 mx-5 ">
             <div class="card justify-content-center">
                 <div class="card-header">
-                    <strong class="card-title">Deposite Information (Details)</strong>
+                    <strong class="card-title">Add Deposite Information</strong>
                 </div>
                 <div class="card-body card-block">
-                    <form action="depAdd" method="POST" enctype="multipart1/form-data" class="form-horizontal">
+                    <form action="depoAdd" method="POST" enctype="multipart1/form-data" class="form-horizontal">
                         <div class="row form-group">
                             <div class="col col-md-3"><label for="name-input" class=" form-control-label">Name :</label></div>
                             <div class="col-12 col-md-9"><input type="text" id="name-input" name="name" placeholder="enter your name" class="form-control"></div>

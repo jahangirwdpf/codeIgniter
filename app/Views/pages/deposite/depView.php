@@ -18,8 +18,8 @@
                         <div class="page-title">
                             <ol class="breadcrumb text-right">
                                 <li><a href="#">Dashboard</a></li>
-                                <li><a href="#">Bristy</a></li>
-                                <li class="active">View Bristy</li>
+                                <li><a href="#">Deposite</a></li>
+                                <li class="active">View Deposite</li>
                             </ol>
                         </div>
                     </div>
