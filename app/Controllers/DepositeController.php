@@ -37,4 +37,25 @@ Class DepositeController extends BaseController {
         $view->delete($dep_id);
         return redirect('depositeView');
     }
+
+    //Edit Data
+    public function Edit($dep_id = null)
+    {
+        $view = new DepositeModel();
+        $data['view'] = $view->where('id', $dep_id)->first();
+        return view('pages/deposite/depEdit', $data);
+    }
+
+    //Update Data
+    public function update($dep_id = null)
+    {
+        $update=  new DepositeModel();
+        $data = 
+        [
+            'name'=>$this->request->getPost('name'),
+            'email'=>$this->request->getPost('email'),
+        ];
+        $update->update($dep_id, $data);
+        return redirect('depositeView');
+    }
 }

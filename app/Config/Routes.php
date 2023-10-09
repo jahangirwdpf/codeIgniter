@@ -32,9 +32,11 @@ $routes->put('rent/update/(:num)', 'HouseRentAdd::update/$1');
 $routes->get('rent/delete/(:num)', 'HouseRentAdd::delete/$1');
 
 
-//Deposite Routes
+// Deposite Routes
 $routes->get('depositeAdd', 'DepositeController::index');
+$routes->post('depoAdd', 'DepositeController::depoAdd');
 $routes->get('depositeView', 'DepositeController::fetchdep');
 $routes->get('deposite/delete/(:num)', 'DepositeController::delete/$1');
-$routes->post('depoAdd', 'DepositeController::depoAdd');
+$routes->get('deposite/edit/(:num)', 'DepositeController::edit/$1');
+$routes->put('deposite/update/(:num)', 'DepositeController::update/$1');
 

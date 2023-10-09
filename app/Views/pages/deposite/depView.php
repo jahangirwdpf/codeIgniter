@@ -54,7 +54,8 @@
                                                     <td><?= $row['id'] ?></td>
                                                     <td><?= $row['name'] ?></td>
                                                     <td><?= $row['email'] ?></td>
-                                                    <td><a href="deposite/delete/<?= $row['id'] ?>" class='btn btn-danger'>Delete</a></td>
+                                                    <td class="text-center"><a href="deposite/edit/<?= $row['id'] ?>" class='btn btn-success'><i class="fa fa-pencil"></i></a></td>
+                                                    <td class="text-center"><a href="deposite/delete/<?= $row['id'] ?>" class='btn btn-danger'><i class="fa fa-trash"></i></a></td>
                                                 </tr>
                                             <?php endforeach; ?>
                                         <?php endif; ?>
