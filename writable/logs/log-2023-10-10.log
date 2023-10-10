@@ -1,0 +1,105 @@
+ERROR - 2023-10-10 03:24:07 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in E:\xampp\htdocs\Codeigniter_project\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 E:\xampp\htdocs\Codeigniter_project\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'bachelor_point', 3306, '', 0)
+#1 E:\xampp\htdocs\Codeigniter_project\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 E:\xampp\htdocs\Codeigniter_project\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 E:\xampp\htdocs\Codeigniter_project\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\xampp\htdocs\Codeigniter_project\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\xampp\htdocs\Codeigniter_project\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 E:\xampp\htdocs\Codeigniter_project\app\Controllers\DepositeController.php(29): CodeIgniter\BaseModel->findAll()
+#7 E:\xampp\htdocs\Codeigniter_project\system\CodeIgniter.php(919): App\Controllers\DepositeController->fetchdep()
+#8 E:\xampp\htdocs\Codeigniter_project\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DepositeController))
+#9 E:\xampp\htdocs\Codeigniter_project\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\xampp\htdocs\Codeigniter_project\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 E:\xampp\htdocs\Codeigniter_project\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in E:\xampp\htdocs\Codeigniter_project\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 E:\xampp\htdocs\Codeigniter_project\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 E:\xampp\htdocs\Codeigniter_project\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 E:\xampp\htdocs\Codeigniter_project\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 E:\xampp\htdocs\Codeigniter_project\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 E:\xampp\htdocs\Codeigniter_project\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 E:\xampp\htdocs\Codeigniter_project\app\Controllers\DepositeController.php(29): CodeIgniter\BaseModel->findAll()
+#6 E:\xampp\htdocs\Codeigniter_project\system\CodeIgniter.php(919): App\Controllers\DepositeController->fetchdep()
+#7 E:\xampp\htdocs\Codeigniter_project\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DepositeController))
+#8 E:\xampp\htdocs\Codeigniter_project\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\xampp\htdocs\Codeigniter_project\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 E:\xampp\htdocs\Codeigniter_project\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-10-10 03:24:07 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `deposite`
+ORDER BY `id` DESC', [], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\DepositeController.php(29): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\DepositeController->fetchdep()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DepositeController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs\\Codeigniter_project\\public\\index.php')
+ERROR - 2023-10-10 07:39:48 --> mysqli_sql_exception: Column 'p_des' cannot be null in E:\xampp\htdocs\Codeigniter_project\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\xampp\htdocs\Codeigniter_project\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `pu...', 0)
+#1 E:\xampp\htdocs\Codeigniter_project\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pu...')
+#2 E:\xampp\htdocs\Codeigniter_project\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pu...')
+#3 E:\xampp\htdocs\Codeigniter_project\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pu...', Array, false)
+#4 E:\xampp\htdocs\Codeigniter_project\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 E:\xampp\htdocs\Codeigniter_project\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 E:\xampp\htdocs\Codeigniter_project\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#7 E:\xampp\htdocs\Codeigniter_project\system\BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#8 E:\xampp\htdocs\Codeigniter_project\app\Controllers\PurcheseController.php(22): CodeIgniter\BaseModel->save(Array)
+#9 E:\xampp\htdocs\Codeigniter_project\system\CodeIgniter.php(919): App\Controllers\PurcheseController->bazarAdd()
+#10 E:\xampp\htdocs\Codeigniter_project\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PurcheseController))
+#11 E:\xampp\htdocs\Codeigniter_project\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 E:\xampp\htdocs\Codeigniter_project\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 E:\xampp\htdocs\Codeigniter_project\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2023-10-10 07:39:48 --> Column 'p_des' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `purchese` (`p_des`, `price`, `comment`) VALUES (:p_des:, :price:, :comment:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(698): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\PurcheseController.php(22): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\PurcheseController->bazarAdd()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PurcheseController))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs\\Codeigniter_project\\public\\index.php')
+ERROR - 2023-10-10 07:40:42 --> mysqli_sql_exception: Column 'price' cannot be null in E:\xampp\htdocs\Codeigniter_project\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\xampp\htdocs\Codeigniter_project\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `pu...', 0)
+#1 E:\xampp\htdocs\Codeigniter_project\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pu...')
+#2 E:\xampp\htdocs\Codeigniter_project\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pu...')
+#3 E:\xampp\htdocs\Codeigniter_project\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pu...', Array, false)
+#4 E:\xampp\htdocs\Codeigniter_project\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 E:\xampp\htdocs\Codeigniter_project\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 E:\xampp\htdocs\Codeigniter_project\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#7 E:\xampp\htdocs\Codeigniter_project\system\BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#8 E:\xampp\htdocs\Codeigniter_project\app\Controllers\PurcheseController.php(22): CodeIgniter\BaseModel->save(Array)
+#9 E:\xampp\htdocs\Codeigniter_project\system\CodeIgniter.php(919): App\Controllers\PurcheseController->bazarAdd()
+#10 E:\xampp\htdocs\Codeigniter_project\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PurcheseController))
+#11 E:\xampp\htdocs\Codeigniter_project\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 E:\xampp\htdocs\Codeigniter_project\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 E:\xampp\htdocs\Codeigniter_project\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2023-10-10 07:40:42 --> Column 'price' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `purchese` (`p_des`, `price`, `comment`) VALUES (:p_des:, :price:, :comment:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(698): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\PurcheseController.php(22): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\PurcheseController->bazarAdd()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PurcheseController))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs\\Codeigniter_project\\public\\index.php')

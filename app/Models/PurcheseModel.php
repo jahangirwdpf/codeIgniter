@@ -1,19 +1,17 @@
 <?php
-
 namespace App\Models;
-
 use CodeIgniter\Model;
 
-class Purchese extends Model
+class PurcheseModel extends Model
 {
     protected $DBGroup          = 'default';
-    protected $table            = 'purcheses';
-    protected $primaryKey       = 'id';
+    protected $table            = 'purchese';
+    protected $primaryKey       = 'p_id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = [];
+    protected $allowedFields    = ['P_id', 'p_des', 'price', 'comment',];
 
     // Dates
     protected $useTimestamps = false;

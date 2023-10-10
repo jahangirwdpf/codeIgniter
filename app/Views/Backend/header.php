@@ -97,15 +97,15 @@
                     <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-glass"></i>Meal Purchase</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="menu-icon fa fa-plus"></i><a href="depositeAdd">Add</a></li>
-                            <li><i class="menu-icon fa fa-print"></i><a href="depositeView">View</a></li>
+                            <li><i class="menu-icon fa fa-plus"></i><a href="addBazar">Add</a></li>
+                            <li><i class="menu-icon fa fa-print"></i><a href="bazarView">View</a></li>
                         </ul>
                     </li>
                     <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-money"></i>Other Purchase</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="menu-icon fa fa-plus"></i><a href="page-login.html">Add</a></li>
-                            <li><i class="menu-icon fa fa-print"></i><a href="page-register.html">View</a></li>
+                            <li><i class="menu-icon fa fa-plus"></i><a href="depositeAdd">Add</a></li>
+                            <li><i class="menu-icon fa fa-print"></i><a href="depositeView">View</a></li>
                         </ul>
                     </li>
                     <li class="menu-title">House Rent </li> <!------------- /.menu-title ----------------->

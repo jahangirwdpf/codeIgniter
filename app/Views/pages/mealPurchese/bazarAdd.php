@@ -36,7 +36,7 @@
                     <strong class="card-title">Deposite Information (Details)</strong>
                 </div>
                 <div class="card-body card-block">
-                    <form action="" method="POST" enctype="multipart1/form-data" class="form-horizontal">
+                    <form action="bazarAdd" method="POST" enctype="multipart1/form-data" class="form-horizontal">
                         <div class="row form-group">
                             <div class="col col-md-3"><label for="p_des-input" class=" form-control-label">Product Description :</label></div>
                             <div class="col-12 col-md-9"><input type="text" id="p_des-input" name="p_des" placeholder="enter your product description" class="form-control"></div>
