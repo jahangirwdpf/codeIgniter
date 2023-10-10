@@ -83,13 +83,13 @@
                     </li>
                     <li class="menu-title">Meal</li><!--------- /.menu-title --------->
                     <li>
-                      <a href=""> <i class="menu-icon fa fa-plus-circle"></i>Add </a>
+                      <a href="mealAdd"> <i class="menu-icon fa fa-plus-circle"></i>Add </a>
                     </li>
                     <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-bar-chart"></i>View</a>
                         <ul class="sub-menu children dropdown-menu">
                             <li><i class="menu-icon fa fa-line-chart"></i><a href="charts-chartjs.html">Individual Meal</a></li>
-                            <li><i class="menu-icon fa fa-area-chart"></i><a href="charts-flot.html">Total Meal</a></li>
+                            <li><i class="menu-icon fa fa-area-chart"></i><a href="mealView">Total Meal</a></li>
                             <li><i class="menu-icon fa fa-pie-chart"></i><a href="charts-peity.html">Meal Rate</a></li>
                         </ul>
                     </li>
@@ -97,7 +97,7 @@
                     <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-glass"></i>Meal Purchase</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="menu-icon fa fa-plus"></i><a href="addBazar">Add</a></li>
+                            <li><i class="menu-icon fa fa-plus"></i><a href="<?= base_url(); ?>bazarAdd">Add</a></li>
                             <li><i class="menu-icon fa fa-print"></i><a href="bazarView">View</a></li>
                         </ul>
                     </li>

@@ -7,8 +7,10 @@ Class DepositeModel extends Model
     protected $table = 'deposite';
     protected $allowedFields = 
     [
-        'name',
-        'email',
+        'date',
+        'deposite',
+        'quantity',
+        'price',
     ];
 
 }

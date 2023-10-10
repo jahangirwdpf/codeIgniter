@@ -37,13 +37,22 @@
                 <div class="card-body card-block">
                     <form action="depoAdd" method="POST" enctype="multipart1/form-data" class="form-horizontal">
                         <div class="row form-group">
-                            <div class="col col-md-3"><label for="name-input" class=" form-control-label">Name :</label></div>
-                            <div class="col-12 col-md-9"><input type="text" id="name-input" name="name" placeholder="enter your name" class="form-control"></div>
+                            <div class="col col-md-3"><label for="dep-input" class=" form-control-label">Purchese Date :</label></div>
+                            <div class="col-12 col-md-9"><input type="date" id="dep-input" name="date" placeholder="enter your deposite" class="form-control"></div>
                         </div>
                         <div class="row form-group">
-                            <div class="col col-md-3"><label for="email-input" class=" form-control-label">E-mail :</label></div>
-                            <div class="col-12 col-md-9"><input type="email" id="email-input" name="email" placeholder="enter your email" class="form-control"></div>
+                            <div class="col col-md-3"><label for="dep-input" class=" form-control-label">Deposite Description :</label></div>
+                            <div class="col-12 col-md-9"><input type="text" id="dep-input" name="deposite" placeholder="enter your deposite" class="form-control"></div>
                         </div>
+                        <div class="row form-group">
+                            <div class="col col-md-3"><label for="quant-input" class=" form-control-label">Quantity :</label></div>
+                            <div class="col-12 col-md-9"><input type="number" id="quant-input" name="quantity" placeholder="enter your product quantity" class="form-control"></div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col col-md-3"><label for="price-input" class=" form-control-label">Price :</label></div>
+                            <div class="col-12 col-md-9"><input type="number" id="price-input" name="price" placeholder="Please enter price" class="form-control"></div>
+                        </div>
+                        <div class="row form-group">
                         <div class="card-footer">
                             <button type="submit" class="btn btn-primary btn-sm">
                                 <i class="fa fa-dot-circle-o"></i> <strong>Submit</strong>

@@ -7,7 +7,7 @@ class PurcheseController extends BaseController
 {
     public function index()
     {
-        return view('pages/mealPurchese/bazarAdd');
+        return view('pages/bazar/bazarAdd');
     }
     //Add Data
     public function bazarAdd()
@@ -16,48 +16,50 @@ class PurcheseController extends BaseController
         $data = 
         [
             'p_des'=>$this->request->getPost('p_des'),
+            'quantity'=>$this->request->getPost('quantity'),
             'price'=>$this->request->getPost('price'),
             'comment'=>$this->request->getPost('comment'),
         ];
         $signUp->save($data);
-        return redirect('bazarAd');
+        return redirect('bazarAdd');
     }
 
-//View All Data
-    // public function fetchbazar()
-    // {
-    //     $view = new PurcheseModel();
-    //     $data['view'] = $view->orderBy('p_id', 'DESC')->findAll();
-    //     return view('pages/mealPurchese/bazarView', $data);
-    // }
+    //View All Data
+    public function fetchbazar()
+    {
+        $view = new PurcheseModel();
+        $data['bazar'] = $view->orderBy('p_id', 'DESC')->findAll();
+        return view('pages/bazar/bazarView', $data);
+    }
 
-    // //Delete data
-    // public function delete($product_id = null)
-    // {
-    //     $view = new PurcheseModel();
-    //     $view->delete($product_id);
-    //     return redirect('bazarView');
-    // }
+    //Delete data
+    public function delete($product_id = null)
+    {
+        $view = new PurcheseModel();
+        $view->delete($product_id);
+        return redirect('bazarView');
+    }
 
-    // //Edit Data
-    // public function Edit($product_id = null)
-    // {
-    //     $view = new PurcheseModel();
-    //     $data['view'] = $view->where('id', $product_id)->first();
-    //     return view('pages/mealPurchese/bazarEdit', $data);
-    // }
+    //Edit Data
+    public function Edit($product_id = null)
+    {
+        $view = new PurcheseModel();
+        $data['bazar'] = $view->where('p_id', $product_id)->first();
+        return view('pages/bazar/bazarEdit', $data);
+    }
 
-    // //Update Data
-    // public function update($product_id = null)
-    // {
-    //     $update=  new PurcheseModel();
-    //     $data = 
-    //     [
-    //         'p_des'=>$this->request->getPost('p_des'),
-    //         'price'=>$this->request->getPost('price'),
-    //         'comment'=>$this->request->getPost('comment'),
-    //     ];
-    //     $update->update($product_id, $data);
-    //     return redirect('bazarView');
-    // }
+    //Update Data
+    public function update($product_id = null)
+    {
+        $update=  new PurcheseModel();
+        $data = 
+        [
+            'p_des'=>$this->request->getPost('p_des'),
+            'quantity'=>$this->request->getPost('quantity'),
+            'price'=>$this->request->getPost('price'),
+            'comment'=>$this->request->getPost('comment'),
+        ];
+        $update->update($product_id, $data);
+        return redirect('bazarView');
+    }
 }

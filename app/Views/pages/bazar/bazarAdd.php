@@ -1,3 +1,4 @@
+
 <?= $this->extend('Backend/header');?>
 <?= $this->section('content');?>
 <!--------------------------------- Start Content ----------------------------->
@@ -19,7 +20,7 @@
                             <ol class="breadcrumb text-right">
                                 <li><a href="#">Dashboard</a></li>
                                 <li><a href="#">Deposite</a></li>
-                                <li class="active">Edit Deposite History</li>
+                                <li class="active">Add Deposite</li>
                             </ol>
                         </div>
                     </div>
@@ -32,33 +33,31 @@
     <div class="col-lg-11 float-left p-3 3 mx-5 ">
             <div class="card justify-content-center">
                 <div class="card-header">
-                    <strong>Edit Deposite Information</strong>
+                    <strong class="card-title">Deposite Information (Details)</strong>
                 </div>
                 <div class="card-body card-block">
-                    <form action="<?= base_url(); ?>deposite/update/<?= $deposite['d_id'] ?>" method="POST" enctype="multipart/form-data" class="form-horizontal">
-                    <div class="col-12 col-md-9"><input type="hidden" id="text-input" name="_method" value="PUT" class="form-control"></div>
+                    <form action="bazarAdd" method="POST" enctype="multipart1/form-data" class="form-horizontal">
                         <div class="row form-group">
-                            <div class="col col-md-3"><label for="date-input" class=" form-control-label">Purchese Date :</label></div>
-                            <div class="col-12 col-md-9"><input type="date" id="date-input" name="date" value="<?= $deposite['date'] ?>" class="form-control"></div>
-                        </div>
-                        <div class="row form-group">
-                            <div class="col col-md-3"><label for="dep-input" class=" form-control-label">Deposite Description :</label></div>
-                            <div class="col-12 col-md-9"><input type="text" id="dep-input" name="deposite" value="<?= $deposite['deposite'] ?>" class="form-control"></div>
+                            <div class="col col-md-3"><label for="p_des-input" class=" form-control-label">Bazar Description :</label></div>
+                            <div class="col-12 col-md-9"><input type="text" id="p_des-input" name="p_des" placeholder="enter your product description" class="form-control"></div>
                         </div>
                         <div class="row form-group">
                             <div class="col col-md-3"><label for="quant-input" class=" form-control-label">Quantity :</label></div>
-                            <div class="col-12 col-md-9"><input type="number" id="quant-input" name="quantity" value="<?= $deposite['quantity'] ?>" class="form-control"></div>
+                            <div class="col-12 col-md-9"><input type="text" id="quant-input" name="quantity" placeholder="enter your product quantity" class="form-control"></div>
                         </div>
                         <div class="row form-group">
                             <div class="col col-md-3"><label for="price-input" class=" form-control-label">Price :</label></div>
-                            <div class="col-12 col-md-9"><input type="number" id="price-input" name="price" value="<?= $deposite['price'] ?>" class="form-control"></div>
+                            <div class="col-12 col-md-9"><input type="text" id="price-input" name="price" placeholder="Please enter price" class="form-control"></div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col col-md-3"><label for="comment-input" class=" form-control-label">Comment :</label></div>
+                            <div class="col-12 col-md-9"><input type="text" id="comment-input" name="comment" placeholder="Please enter a comment" class="form-control"></div>
                         </div>
                         <div class="card-footer">
                             <button type="submit" class="btn btn-primary btn-sm">
-                                <i class="fa fa-dot-circle-o"></i> <strong>Update</strong>
+                                <i class="fa fa-dot-circle-o"></i> <strong>Submit</strong>
                             </button>
                         </div>
-                    </div>
                     </form>
                 </div>
             </div>

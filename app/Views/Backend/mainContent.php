@@ -1,4 +1,6 @@
-
+<?php
+$db = \Config\Database::connect();
+?>
     <div class="content">
         <!--------------- Animated -------------------->
         <div class="animated fadeIn">
@@ -13,7 +15,17 @@
                                 </div>
                                 <div class="stat-content">
                                     <div class="text-left dib">
-                                        <div class="stat-text"><span class="count">250</span></div>
+                                        <div class="stat-text">
+                                            <span class="count">
+                                                <?php
+                                                    $query = $db->table('member')->get();
+
+                                                    foreach ($query->getResult() as $row) {
+                                                        echo $row->id;
+                                                    }
+                                                ?>
+                                            </span>
+                                        </div>
                                         <div class="stat-heading">Total Members</div>
                                     </div>
                                 </div>

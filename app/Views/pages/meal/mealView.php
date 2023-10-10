@@ -1,3 +1,4 @@
+
 <?= $this->extend('Backend/header');?>
 <?= $this->section('content');?>
 <!--------------------------------- Start Content ----------------------------->
@@ -19,7 +20,7 @@
                             <ol class="breadcrumb text-right">
                                 <li><a href="#">Dashboard</a></li>
                                 <li><a href="#">Deposite</a></li>
-                                <li class="active">View Deposite</li>
+                                <li class="active">View Deposite History</li>
                             </ol>
                         </div>
                     </div>
@@ -29,7 +30,7 @@
     </div>
 
     <!----------------------- Start content ------------------------------------>
-    <div class="content">
+        <div class="content">
             <div class="animated fadeIn">
                 <div class="row">
                     <div class="col-md-12">
@@ -42,24 +43,22 @@
                                     <thead>
                                         <tr class="text-center">
                                             <th>ID</th>
-                                            <th>Purchese Date</th>
-                                            <th>Deposite Des.</th>
-                                            <th>Quantity</th>
-                                            <th>Price</th>
+                                            <th>Breakfast</th>
+                                            <th>Lunch</th>
+                                            <th>Dinner</th>
                                             <th colspan='2' >Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <?php if($deposite) :?>
-                                            <?php foreach ($deposite as $row) :?>
+                                        <?php if ($meal) :?>
+                                            <?php foreach ($meal as $row) :?>
                                                 <tr>
-                                                    <td><?= $row['d_id'] ?></td>
-                                                    <td><?= $row['date'] ?></td>
-                                                    <td><?= $row['deposite'] ?></td>
-                                                    <td><?= $row['quantity'] ?></td>
-                                                    <td><?= $row['price'] ?></td>
-                                                    <td class="text-center"><a href="deposite/edit/<?= $row['d_id'] ?>" class='btn btn-success'><i class="fa fa-pencil"></i></a></td>
-                                                    <td class="text-center"><a href="deposite/delete/<?= $row['d_id'] ?>" class='btn btn-danger'><i class="fa fa-trash"></i></a></td>
+                                                    <td><?= $row['m_id']?></td>
+                                                    <td><?= $row['bfast']?></td>
+                                                    <td><?= $row['lunch']?></td>
+                                                    <td><?= $row['dinner']?></td>
+                                                    <td class="text-center"><a href="<?= base_url() ?>meal/edit/<?= $row['m_id']?>" class="btn btn-success">Edit</a</td>
+                                                    <td class="text-center"><a href="meal/delete/<?= $row['m_id']?>" class="btn btn-danger">Delete</a</td>
                                                 </tr>
                                             <?php endforeach; ?>
                                         <?php endif; ?>

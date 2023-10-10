@@ -32,29 +32,25 @@
     <div class="col-lg-11 float-left p-3 3 mx-5 ">
             <div class="card justify-content-center">
                 <div class="card-header">
-                    <strong>Edit Deposite Information</strong>
+                    <strong>Deposite Information</strong>
                 </div>
                 <div class="card-body card-block">
-                    <form action="<?= base_url(); ?>deposite/update/<?= $deposite['d_id'] ?>" method="POST" enctype="multipart/form-data" class="form-horizontal">
+                    <form action="<?= base_url(); ?>meal/update/<?= $meal['m_id'] ?>" method="POST" enctype="multipart/form-data" class="form-horizontal">
                     <div class="col-12 col-md-9"><input type="hidden" id="text-input" name="_method" value="PUT" class="form-control"></div>
-                        <div class="row form-group">
-                            <div class="col col-md-3"><label for="date-input" class=" form-control-label">Purchese Date :</label></div>
-                            <div class="col-12 col-md-9"><input type="date" id="date-input" name="date" value="<?= $deposite['date'] ?>" class="form-control"></div>
+                    <div class="row form-group">
+                            <div class="col col-md-3"><label for="bfast-input" class=" form-control-label">Breakfast :</label></div>
+                            <div class="col-12 col-md-9"><input type="text" id="bfast-input" name="bfast" value="<?= $meal['bfast'] ?>" class="form-control"></div>
                         </div>
                         <div class="row form-group">
-                            <div class="col col-md-3"><label for="dep-input" class=" form-control-label">Deposite Description :</label></div>
-                            <div class="col-12 col-md-9"><input type="text" id="dep-input" name="deposite" value="<?= $deposite['deposite'] ?>" class="form-control"></div>
+                            <div class="col col-md-3"><label for="lunch-input" class=" form-control-label">Lunch :</label></div>
+                            <div class="col-12 col-md-9"><input type="text" id="lunch-input" name="lunch" value="<?= $meal['lunch'] ?>" class="form-control"></div>
                         </div>
                         <div class="row form-group">
-                            <div class="col col-md-3"><label for="quant-input" class=" form-control-label">Quantity :</label></div>
-                            <div class="col-12 col-md-9"><input type="number" id="quant-input" name="quantity" value="<?= $deposite['quantity'] ?>" class="form-control"></div>
-                        </div>
-                        <div class="row form-group">
-                            <div class="col col-md-3"><label for="price-input" class=" form-control-label">Price :</label></div>
-                            <div class="col-12 col-md-9"><input type="number" id="price-input" name="price" value="<?= $deposite['price'] ?>" class="form-control"></div>
+                            <div class="col col-md-3"><label for="dinner-input" class=" form-control-label">Dinner :</label></div>
+                            <div class="col-12 col-md-9"><input type="text" id="dinner-input" name="dinner" value="<?= $meal['dinner'] ?>" class="form-control"></div>
                         </div>
                         <div class="card-footer">
-                            <button type="submit" class="btn btn-primary btn-sm">
+                            <button type="submit" class="btn btn-primary btn-sm text-center">
                                 <i class="fa fa-dot-circle-o"></i> <strong>Update</strong>
                             </button>
                         </div>

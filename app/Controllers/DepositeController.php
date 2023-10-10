@@ -15,8 +15,10 @@ Class DepositeController extends BaseController {
         $signUp = new DepositeModel();
         $data = 
         [
-            'name'=>$this->request->getPost('name'),
-            'email'=>$this->request->getPost('email'),
+            'date'=>$this->request->getPost('date'),
+            'deposite'=>$this->request->getPost('deposite'),
+            'quantity'=>$this->request->getPost('quantity'),
+            'price'=>$this->request->getPost('price'),
         ];
         $signUp->save($data);
         return redirect('depositeAdd');
@@ -26,7 +28,7 @@ Class DepositeController extends BaseController {
     public function fetchdep()
     {
         $view = new DepositeModel();
-        $data['view'] = $view->orderBy('id', 'DESC')->findAll();
+        $data['deposite'] = $view->orderBy('d_id', 'DESC')->findAll();
         return view('pages/deposite/depView', $data);
     }
 
@@ -42,7 +44,7 @@ Class DepositeController extends BaseController {
     public function Edit($dep_id = null)
     {
         $view = new DepositeModel();
-        $data['view'] = $view->where('id', $dep_id)->first();
+        $data['deposite'] = $view->where('d_id', $dep_id)->first();
         return view('pages/deposite/depEdit', $data);
     }
 
@@ -52,8 +54,10 @@ Class DepositeController extends BaseController {
         $update=  new DepositeModel();
         $data = 
         [
-            'name'=>$this->request->getPost('name'),
-            'email'=>$this->request->getPost('email'),
+            'date'=>$this->request->getPost('date'),
+            'deposite'=>$this->request->getPost('deposite'),
+            'quantity'=>$this->request->getPost('quantity'),
+            'price'=>$this->request->getPost('price'),
         ];
         $update->update($dep_id, $data);
         return redirect('depositeView');

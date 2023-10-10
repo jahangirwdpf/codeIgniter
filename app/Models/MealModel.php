@@ -2,15 +2,16 @@
 namespace App\Models;
 use CodeIgniter\Model;
 
-class PurcheseModel extends Model {
+class MealModel extends Model
+{
     protected $DBGroup          = 'default';
-    protected $table            = 'purchese';
-    protected $primaryKey       = 'p_id';
+    protected $table            = 'meal';
+    protected $primaryKey       = 'm_id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['p_id', 'p_des', 'quantity', 'price', 'comment',];
+    protected $allowedFields    = ['bfast', 'lunch', 'dinner',];
 
     // Dates
     protected $useTimestamps = false;

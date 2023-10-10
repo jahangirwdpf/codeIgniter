@@ -32,15 +32,27 @@ $routes->put('rent/update/(:num)', 'HouseRentAdd::update/$1');
 $routes->get('rent/delete/(:num)', 'HouseRentAdd::delete/$1');
 
 // Deposite Routes
-$routes->get('depositeAdd', 'PurcheseController::index');
-$routes->post('depoAdd', 'PurcheseController::depoAdd');
-$routes->get('depositeView', 'PurcheseController::fetchdep');
-$routes->get('deposite/delete/(:num)', 'PurcheseController::delete/$1');
-$routes->get('deposite/edit/(:num)', 'PurcheseController::edit/$1');
-$routes->put('deposite/update/(:num)', 'PurcheseController::update/$1');
+$routes->get('depositeAdd', 'DepositeController::index');
+$routes->post('depoAdd', 'DepositeController::depoAdd');
+$routes->get('depositeView', 'DepositeController::fetchdep');
+$routes->get('deposite/delete/(:num)', 'DepositeController::delete/$1');
+$routes->get('deposite/edit/(:num)', 'DepositeController::edit/$1');
+$routes->put('deposite/update/(:num)', 'DepositeController::update/$1');
 
 // Meal Purchese
-$routes->get('bazars', 'PurcheseController::index');
-$routes->post('addBazar', 'PurcheseController::bazarAdd');
+$routes->get('bazarAdd', 'PurcheseController::index');
+$routes->post('bazarAdd', 'PurcheseController::bazarAdd');
+$routes->get('bazarView', 'PurcheseController::fetchbazar');
+$routes->get('bazar/delete/(:num)', 'PurcheseController::delete/$1');
+$routes->get('bazar/edit/(:num)', 'PurcheseController::edit/$1');
+$routes->put('bazar/update/(:num)', 'PurcheseController::update/$1');
+
+// Meal Amount
+$routes->get('mealAdd', 'MealController::index');
+$routes->post('mealAdd', 'MealController::mealAdd');
+$routes->get('mealView', 'MealController::fetchmeal');
+$routes->get('meal/delete/(:num)', 'MealController::delete/$1');
+$routes->get('meal/edit/(:num)', 'MealController::edit/$1');
+$routes->put('meal/update/(:num)', 'MealController::update/$1'); 
 
 
