@@ -42,19 +42,19 @@
                                 <label for="bfast-input" class=" form-control-label">Breakfast :</label>
                             </div>
                             <div class="col-12 col-md-2">
-                                <input type="text" id="bfast-input" name="bfast" placeholder="0" class="form-control text-center">
+                                <input type="number" id="bfast-input" name="bfast" placeholder="0" class="form-control text-center">
                             </div>
                             <div class="col col-md-2">
                                 <label for="lunch-input" class=" form-control-label">Lunch :</label>
                             </div>
                             <div class="col-12 col-md-2">
-                                <input type="text" id="bfast-input" name="bfast" placeholder="0" class="form-control text-center">
+                                <input type="number" id="lunch-input" name="lunch" placeholder="0" class="form-control text-center">
                             </div>
                             <div class="col col-md-2">
                                 <label for="dinner-input" class=" form-control-label">Dinner :</label>
                             </div>
                             <div class="col-12 col-md-2">
-                                <input type="text" id="bfast-input" name="bfast" placeholder="0" class="form-control text-center">
+                                <input type="number" id="dinner-input" name="dinner" placeholder="0" class="form-control text-center">
                             </div>
                         </div>
                         <div class="card-footer">
