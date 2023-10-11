@@ -5,6 +5,8 @@ use CodeIgniter\Model;
 Class DepositeModel extends Model
 {
     protected $table = 'deposite';
+    protected $primaryKey = 'd_id';
+
     protected $allowedFields = 
     [
         'date',
@@ -12,5 +14,4 @@ Class DepositeModel extends Model
         'quantity',
         'price',
     ];
-
 }

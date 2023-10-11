@@ -1,6 +1,4 @@
-<?php
-$db = \Config\Database::connect();
-?>
+
     <div class="content">
         <!--------------- Animated -------------------->
         <div class="animated fadeIn">
@@ -17,13 +15,7 @@ $db = \Config\Database::connect();
                                     <div class="text-left dib">
                                         <div class="stat-text">
                                             <span class="count">
-                                                <?php
-                                                    $query = $db->table('member')->get();
-
-                                                    foreach ($query->getResult() as $row) {
-                                                        echo $row->id;
-                                                    }
-                                                ?>
+                                               <?= $count ?> 
                                             </span>
                                         </div>
                                         <div class="stat-heading">Total Members</div>
@@ -43,7 +35,10 @@ $db = \Config\Database::connect();
                                 </div>
                                 <div class="stat-content">
                                     <div class="text-left dib">
-                                        <div class="stat-text"><span class="count">16500</span></div>
+                                        <div class="stat-text">
+                                            <span class="count">
+                                            <?= $sum ?>                                            </span>
+                                        </div>
                                         <div class="stat-heading">Total Deposite</div>
                                     </div>
                                 </div>
@@ -61,7 +56,9 @@ $db = \Config\Database::connect();
                                 </div>
                                 <div class="stat-content">
                                     <div class="text-left dib">
-                                        <div class="stat-text"><span class="count">437</span></div>
+                                        <div class="stat-text"><span class="count">
+                                            <?= $total ?>
+                                        </span></div>
                                         <div class="stat-heading">Total <br> Meal</div>
                                     </div>
                                 </div>
@@ -79,7 +76,8 @@ $db = \Config\Database::connect();
                                 </div>
                                 <div class="stat-content">
                                     <div class="text-left dib">
-                                        <div class="stat-text">75.<span class="count">78</span></div>
+                                        <div class="stat-text">    
+                                        <span class="count"><?= round($sum/$total,2) ?></span></div>
                                         <div class="stat-heading">Meal <br> Rate</div>
                                     </div>
                                 </div>

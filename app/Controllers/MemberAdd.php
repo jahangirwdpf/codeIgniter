@@ -64,4 +64,13 @@ class MemberAdd extends BaseController
         $member->delete($member_id);
         return redirect('memberView');
     }
+
+    // fetch data for dashboard 
+    public function fetchmemberDash()
+    {
+       
+
+        $data['member'] = $member->orderBy('id', $member_id)->findAll();
+        return redirect('memberView', $data);
+    }
 }
