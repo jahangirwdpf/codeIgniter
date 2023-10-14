@@ -3,7 +3,11 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
+<<<<<<< HEAD
 -- Generation Time: Oct 14, 2023 at 03:42 AM
+=======
+-- Generation Time: Oct 11, 2023 at 10:02 AM
+>>>>>>> 09dbc2862e807c9ef85cfcf3b05a584eb1783e59
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -74,7 +78,10 @@ INSERT INTO `house_rent` (`id`, `rent`, `gas`, `current`, `wifi`, `bua`, `city`)
 
 CREATE TABLE `meal` (
   `m_id` int(11) NOT NULL,
+<<<<<<< HEAD
   `date` date NOT NULL DEFAULT current_timestamp(),
+=======
+>>>>>>> 09dbc2862e807c9ef85cfcf3b05a584eb1783e59
   `bfast` double(50,0) NOT NULL,
   `lunch` double(50,0) DEFAULT NULL,
   `dinner` double(50,0) DEFAULT NULL
@@ -84,6 +91,7 @@ CREATE TABLE `meal` (
 -- Dumping data for table `meal`
 --
 
+<<<<<<< HEAD
 INSERT INTO `meal` (`m_id`, `date`, `bfast`, `lunch`, `dinner`) VALUES
 (3, '2023-10-01', 1, 1, 1),
 (4, '2023-10-02', 1, 1, 1),
@@ -94,6 +102,15 @@ INSERT INTO `meal` (`m_id`, `date`, `bfast`, `lunch`, `dinner`) VALUES
 (9, '2023-10-12', 1, 1, 1),
 (10, '2023-10-12', 1, 1, 1),
 (11, '2023-10-12', 1, 1, 1);
+=======
+INSERT INTO `meal` (`m_id`, `bfast`, `lunch`, `dinner`) VALUES
+(3, 1, 1, 1),
+(4, 1, 1, 1),
+(5, 3, 2, 4),
+(6, 5, 4, 3),
+(7, 1, 2, 2),
+(8, 2, 2, 2);
+>>>>>>> 09dbc2862e807c9ef85cfcf3b05a584eb1783e59
 
 -- --------------------------------------------------------
 
@@ -115,6 +132,7 @@ CREATE TABLE `member` (
 -- Dumping data for table `member`
 --
 
+<<<<<<< HEAD
 INSERT INTO `member` (`m_id`, `name`, `address`, `email`, `mobile`, `password`, `r_id`) VALUES
 (1, 'JAHANGIR ALAM', ' Shariatpur', 'jahangirwdpf@gmail.com', '01727280318', 'j111', 0),
 (2, 'Noman', ' Chandpur', 'noman@gmail.com', '01842436222', 'n111', 0),
@@ -122,6 +140,13 @@ INSERT INTO `member` (`m_id`, `name`, `address`, `email`, `mobile`, `password`, 
 (4, 'Ratul', ' Patuakhali', 'ratul@yahoo.com', '01319657634', 'rt111', 0),
 (5, 'Shadin', 'Patuakhali', 'shadin@gmail.com', '01717075957', 's111', 0),
 (6, 'Rakib', 'Barguna', 'rakib@gmail.com', '01775566772', 'rk111', 0);
+=======
+INSERT INTO `member` (`id`, `name`, `email`, `password`, `address`, `gender`, `r_id`) VALUES
+(1, 'JAHANGIR ALAM', 'jahangir@gmail.com', '5555', 'Janullah Madbor Kandi (ward-01)', 'male', 0),
+(2, 'Rakib', 'rakib@gmail.com', '1111', 'Dhaka', 'male', 0),
+(3, 'Bristy', 'r@gmail.com', '5555', 'Dhaka', 'male', 0),
+(4, 'Rakib', 'jahangir_alam1293@yahoo.com', '55', 'hgh', 'male', 0);
+>>>>>>> 09dbc2862e807c9ef85cfcf3b05a584eb1783e59
 
 -- --------------------------------------------------------
 
@@ -224,13 +249,21 @@ ALTER TABLE `house_rent`
 -- AUTO_INCREMENT for table `meal`
 --
 ALTER TABLE `meal`
+<<<<<<< HEAD
   MODIFY `m_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+=======
+  MODIFY `m_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+>>>>>>> 09dbc2862e807c9ef85cfcf3b05a584eb1783e59
 
 --
 -- AUTO_INCREMENT for table `member`
 --
 ALTER TABLE `member`
+<<<<<<< HEAD
   MODIFY `m_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+=======
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+>>>>>>> 09dbc2862e807c9ef85cfcf3b05a584eb1783e59
 
 --
 -- AUTO_INCREMENT for table `purchese`
