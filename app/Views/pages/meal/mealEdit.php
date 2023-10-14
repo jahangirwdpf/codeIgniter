@@ -37,7 +37,11 @@
                 <div class="card-body card-block">
                     <form action="<?= base_url(); ?>meal/update/<?= $meal['m_id'] ?>" method="POST" enctype="multipart/form-data" class="form-horizontal">
                     <div class="col-12 col-md-9"><input type="hidden" id="text-input" name="_method" value="PUT" class="form-control"></div>
-                    <div class="row form-group">
+                        <div class="row form-group">
+                            <div class="col col-md-3"><label for="date-input" class=" form-control-label">Date :</label></div>
+                            <div class="col-12 col-md-9"><input type="date" id="date-input" name="date" value="<?= $meal['date'] ?>" class="form-control"></div>
+                        </div>
+                        <div class="row form-group">
                             <div class="col col-md-3"><label for="bfast-input" class=" form-control-label">Breakfast :</label></div>
                             <div class="col-12 col-md-9"><input type="text" id="bfast-input" name="bfast" value="<?= $meal['bfast'] ?>" class="form-control"></div>
                         </div>

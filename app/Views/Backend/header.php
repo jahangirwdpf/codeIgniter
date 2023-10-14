@@ -117,10 +117,10 @@
                     </li>
                     <li class="menu-title">Summary/ Reports</li><!--------- /.menu-title --------->
                     <li>
-                      <a href="widgets.html"> <i class="menu-icon fa fa-print"></i>Indivisual Reports </a>
+                      <a href=""> <i class="menu-icon fa fa-print"></i>Indivisual Reports </a>
                     </li>
                     <li>
-                      <a href="widgets.html"> <i class="menu-icon fa fa-newspaper-o"></i>Monthly Summary </a>
+                      <a href="<?= base_url(); ?>reports"> <i class="menu-icon fa fa-newspaper-o"></i>Monthly Summary </a>
                     </li>
                 </ul>
             </div><!--------- /.navbar-collapse --------->

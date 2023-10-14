@@ -17,9 +17,9 @@ class MemberAdd extends BaseController
         [
             'name'=>$this->request->getPost('name'),
             'email'=>$this->request->getPost('email'),
-            'password'=>$this->request->getPost('password'),
             'address'=>$this->request->getPost('address'),
-            'gender'=>$this->request->getPost('gender')
+            'mobile'=>$this->request->getPost('mobile'),
+            'password'=>$this->request->getPost('password')
         ];
         $signup->save($data);
         return redirect('memberAdd');
@@ -29,7 +29,7 @@ class MemberAdd extends BaseController
     public function fetchmember()
     {
         $member = new UserModel();
-        $data['member'] = $member->orderBy('id', 'DESC')->findAll();
+        $data['member'] = $member->orderBy('m_id', 'DESC')->findAll();
         return view('pages/member/memberView', $data);
     }
 
@@ -37,7 +37,7 @@ class MemberAdd extends BaseController
     public function Edit($member_id = null)
     {
         $member = new UserModel();
-        $data['member'] = $member->where('id', $member_id)->first();
+        $data['member'] = $member->where('m_id', $member_id)->first();
         return view('pages/member/memberEdit', $data);
     }
 
@@ -48,9 +48,9 @@ class MemberAdd extends BaseController
         [
             'name'=>$this->request->getPost('name'),
             'email'=>$this->request->getPost('email'),
-            'password'=>$this->request->getPost('password'),
             'address'=>$this->request->getPost('address'),
-            'gender'=>$this->request->getPost('gender')
+            'mobile'=>$this->request->getPost('mobile'),
+            'password'=>$this->request->getPost('password')
         ];
 
         $update->update($member_id, $data);
@@ -70,7 +70,7 @@ class MemberAdd extends BaseController
     {
        
 
-        $data['member'] = $member->orderBy('id', $member_id)->findAll();
+        $data['member'] = $member->orderBy('m_id', $member_id)->findAll();
         return redirect('memberView', $data);
     }
 }

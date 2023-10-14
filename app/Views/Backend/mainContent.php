@@ -3,6 +3,51 @@
         <!--------------- Animated -------------------->
         <div class="animated fadeIn">
             <!------------- Widgets ------------------->
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <div class="stat-widget-five">
+                                <div class="stat-icon dib flat-color-1">
+                                    <i class="fa fa-users"></i>
+                                </div>
+                                <div class="stat-content">
+                                    <div class="text-center dib">
+                                        <div class="stat-text">
+                                            <span class="count">
+                                               <?= $count ?> 
+                                            </span>
+                                        </div>
+                                        <div class="stat-heading">Total Members</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <div class="stat-widget-five">
+                                <div class="stat-icon dib flat-color-2">
+                                    <i class="pe-7s-paint-bucket"></i>
+                                </div>
+                                <div class="stat-content">
+                                    <div class="text-center dib">
+                                        <div class="stat-text">
+                                            <span class="count">
+                                            <?= $sum ?>                                            </span>
+                                        </div>
+                                        <div class="stat-heading">Total Deposite</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="row">
                 <div class="col-lg-3 col-md-6">
                     <div class="card">
@@ -184,7 +229,7 @@
                                                 <td> #5468 </td>
                                                 <td>  <span class="name">Gregory Dixon</span> </td>
                                                 <td>
-                                                    <span class="badge badge-complete">Complete</span>
+                                                    <span class="badge badge-complete">Pending</span>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -197,7 +242,7 @@
                                                 <td> #5467 </td>
                                                 <td>  <span class="name">Catherine Dixon</span> </td>
                                                 <td>
-                                                    <span class="badge badge-complete">Complete</span>
+                                                    <span class="badge badge-complete">Pending</span>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -223,7 +268,7 @@
                                                 <td> #5465 </td>
                                                 <td>  <span class="name">Johnny Stephens</span> </td>
                                                 <td>
-                                                    <span class="badge badge-complete">Complete</span>
+                                                    <span class="badge badge-complete">Pending</span>
                                                 </td>
                                             </tr>
                                         </tbody>

@@ -37,7 +37,23 @@
                 </div>
                 <div class="card-body card-">
                     <form action="mealAdd" method="POST" enctype="multipart1/form-data" class="form-horizontal">
+                        <!-- <div class="row form-group d-flex text-center">
+                            <div class="col col-md-3">
+                                <label for="date-input" class=" form-control-label">Select Member :</label>
+                            </div>
+                            <div class="col-12 col-md-9">
+                                <input type="date" id="date-input" name="date" class="form-control">
+                            </div>
+                        </div> -->
                         <div class="row form-group d-flex text-center">
+                            <div class="col col-md-3">
+                                <label for="date-input" class=" form-control-label">Date :</label>
+                            </div>
+                            <div class="col-12 col-md-9">
+                                <input type="date" id="date-input" name="date" class="form-control">
+                            </div>
+                        </div>
+                        <div class="row form-group d-flex text-center">  
                             <div class="col col-md-2">
                                 <label for="bfast-input" class=" form-control-label">Breakfast :</label>
                             </div>

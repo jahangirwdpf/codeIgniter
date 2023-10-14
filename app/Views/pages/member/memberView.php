@@ -42,10 +42,11 @@
                                 <table id="bootstrap-data-table" class="table table-striped table-bordered">
                                     <thead>
                                         <tr class="text-center">
-                                            <th>Name</th>
-                                            <th>Email</th>
+                                            <th>ID</th>
+                                            <th>Full Name</th>
                                             <th>Address</th>
-                                            <th>Gender</th>
+                                            <th>E-mail (suername)</th>
+                                            <th>Mobile</th>
                                             <th colspan='2' >Action</th>
                                         </tr>
                                     </thead>
@@ -53,12 +54,13 @@
                                         <?php if ($member) :?>
                                             <?php foreach ($member as $row) :?>
                                                 <tr>
+                                                    <td><?= $row['m_id']?></td>
                                                     <td><?= $row['name']?></td>
-                                                    <td><?= $row['email']?></td>
                                                     <td><?= $row['address']?></td>
-                                                    <td><?= $row['gender']?></td>
-                                                    <td class="text-center"><a href="<?= base_url() ?>member/edit/<?= $row['id']?>" class="btn btn-success">Edit</a</td>
-                                                    <td class="text-center"><a href="member/delete/<?= $row['id']?>" class="btn btn-danger">Delete</a</td>
+                                                    <td><?= $row['email']?></td>
+                                                    <td><?= $row['mobile']?></td>
+                                                    <td class="text-center"><a href="<?= base_url() ?>member/edit/<?= $row['m_id']?>" class="btn btn-success">Edit</a</td>
+                                                    <td class="text-center"><a href="member/delete/<?= $row['m_id']?>" class="btn btn-danger">Delete</a</td>
                                                 </tr>
                                             <?php endforeach; ?>
                                         <?php endif; ?>

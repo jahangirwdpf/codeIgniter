@@ -38,16 +38,16 @@
                 <div class="card-body card-block">
                     <form action="bazarAdd" method="POST" enctype="multipart1/form-data" class="form-horizontal">
                         <div class="row form-group">
+                            <div class="col col-md-3"><label for="comment-input" class=" form-control-label">Select :</label></div>
+                            <div class="col-12 col-md-9"><input type="text" id="comment-input" name="comment" placeholder="Please enter a comment" class="form-control"></div>
+                        </div>
+                        <div class="row form-group">
                             <div class="col col-md-3"><label for="p_des-input" class=" form-control-label">Product Description :</label></div>
                             <div class="col-12 col-md-9"><input type="text" id="p_des-input" name="p_des" placeholder="enter your product description" class="form-control"></div>
                         </div>
                         <div class="row form-group">
                             <div class="col col-md-3"><label for="price-input" class=" form-control-label">Price :</label></div>
                             <div class="col-12 col-md-9"><input type="text" id="price-input" name="price" placeholder="Please enter price" class="form-control"></div>
-                        </div>
-                        <div class="row form-group">
-                            <div class="col col-md-3"><label for="comment-input" class=" form-control-label">Comment :</label></div>
-                            <div class="col-12 col-md-9"><input type="text" id="comment-input" name="comment" placeholder="Please enter a comment" class="form-control"></div>
                         </div>
                         <div class="card-footer">
                             <button type="submit" class="btn btn-primary btn-sm">

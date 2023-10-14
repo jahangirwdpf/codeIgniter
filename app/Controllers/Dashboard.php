@@ -20,10 +20,6 @@ class Dashboard extends BaseController
         $result = $meal->select('sum(bfast + lunch + dinner) as sumQuantities')->first();
 		$data['total'] = $result['sumQuantities'];
 
-        // $mealR = new MealModel();
-        // $result = $mealR->select('avg(bfast / lunch) as avgQuantities')->first();
-		// $data['totalM'] = $result['avgQuantities'];
-
         return view('dashboard',$data);
     }
     

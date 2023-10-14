@@ -43,20 +43,26 @@
                                     <thead>
                                         <tr class="text-center">
                                             <th>ID</th>
+                                            <th>Date</th>
+                                            <th>Member Name</th>
                                             <th>Breakfast</th>
                                             <th>Lunch</th>
                                             <th>Dinner</th>
+                                            <th>Total</th>
                                             <th colspan='2' >Action</th>
                                         </tr>
                                     </thead>
-                                    <tbody>
+                                    <tbody class='text-center'>
                                         <?php if ($meal) :?>
                                             <?php foreach ($meal as $row) :?>
                                                 <tr>
                                                     <td><?= $row['m_id']?></td>
+                                                    <td><?= $row['date']?></td>
+                                                    <td><?= '' ?></td>
                                                     <td><?= $row['bfast']?></td>
                                                     <td><?= $row['lunch']?></td>
                                                     <td><?= $row['dinner']?></td>
+                                                    <td> <?= '' ?></td>
                                                     <td class="text-center"><a href="<?= base_url() ?>meal/edit/<?= $row['m_id']?>" class="btn btn-success">Edit</a</td>
                                                     <td class="text-center"><a href="meal/delete/<?= $row['m_id']?>" class="btn btn-danger">Delete</a</td>
                                                 </tr>

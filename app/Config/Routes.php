@@ -39,7 +39,7 @@ $routes->get('deposite/delete/(:num)', 'DepositeController::delete/$1');
 $routes->get('deposite/edit/(:num)', 'DepositeController::edit/$1');
 $routes->put('deposite/update/(:num)', 'DepositeController::update/$1');
 
-// Meal Purchese
+// Meal Purchese Routes
 $routes->get('bazarAdd', 'PurcheseController::index');
 $routes->post('bazarAdd', 'PurcheseController::bazarAdd');
 $routes->get('bazarView', 'PurcheseController::fetchbazar');
@@ -47,7 +47,7 @@ $routes->get('bazar/delete/(:num)', 'PurcheseController::delete/$1');
 $routes->get('bazar/edit/(:num)', 'PurcheseController::edit/$1');
 $routes->put('bazar/update/(:num)', 'PurcheseController::update/$1');
 
-// Meal Amount
+// Meal Amount Routes
 $routes->get('mealAdd', 'MealController::index');
 $routes->post('mealAdd', 'MealController::mealAdd');
 $routes->get('mealView', 'MealController::fetchmeal');
@@ -55,4 +55,7 @@ $routes->get('meal/delete/(:num)', 'MealController::delete/$1');
 $routes->get('meal/edit/(:num)', 'MealController::edit/$1');
 $routes->put('meal/update/(:num)', 'MealController::update/$1'); 
 
+// Reports Routes
+$routes->get('reportsS', 'ReportsController::index');
+$routes->get('reportI', 'ReportsController::reportI');
 

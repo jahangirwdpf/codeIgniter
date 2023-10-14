@@ -36,45 +36,31 @@
                     <strong>Member Information</strong>
                 </div>
                 <div class="card-body card-block">
-                    <form action="<?= base_url(); ?>member/update/<?= $member['id'] ?>" method="POST" enctype="multipart/form-data" class="form-horizontal">
+                    <form action="<?= base_url(); ?>member/update/<?= $member['m_id'] ?>" method="POST" enctype="multipart/form-data" class="form-horizontal">
                         <div class="col-12 col-md-9"><input type="hidden" id="text-input" name="_method" value="PUT" class="form-control"></div>
                             <div class="row form-group">
-                                <div class="col col-md-3"><label for="text-input" class=" form-control-label">Name :</label></div>
+                                <div class="col col-md-3"><label for="text-input" class=" form-control-label">ID :</label></div>
+                                <div class="col-12 col-md-9"><input type="text" id="text-input" name="m_id" value="<?= $member['m_id'] ?>" class="form-control"></div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col col-md-3"><label for="text-input" class=" form-control-label">Full Name :</label></div>
                                 <div class="col-12 col-md-9"><input type="text" id="text-input" name="name" value="<?= $member['name'] ?>" class="form-control"></div>
-                            </div>
-                            <div class="row form-group">
-                                <div class="col col-md-3"><label for="email-input" class=" form-control-label">Email :</label></div>
-                                <div class="col-12 col-md-9"><input type="email" id="email-input" name="email" value="<?= $member['email'] ?>" class="form-control"></div>
-                            </div>
-                            <div class="row form-group">
-                                <div class="col col-md-3"><label for="password-input" class=" form-control-label">Password :</label></div>
-                                <div class="col-12 col-md-9"><input type="password" id="password-input" name="password" value="<?= $member['password'] ?>" class="form-control"></div>
                             </div>
                             <div class="row form-group">
                                 <div class="col col-md-3"><label for="textarea-input" class=" form-control-label">Address :</label></div>
                                 <div class="col-12 col-md-9"><textarea name="address" id="textarea-input" rows="5" class="form-control"> <?= $member['address'] ?></textarea></div>
                             </div>
                             <div class="row form-group">
-                                <div class="col col-md-3"><label class=" form-control-label">Gender :</label></div>
-                                <div class="col col-md-9">
-                                    <div class="form-check">
-                                        <div class="radio">
-                                            <label for="radio1" class="form-check-label ">
-                                                <input <?= $member['gender'] ?>  type="radio" id="radio1" name="gender" value="male" class="form-check-input">Male
-                                            </label>
-                                        </div>
-                                        <div class="radio">
-                                            <label for="radio2" class="form-check-label ">
-                                                <input <?= $member['gender'] ?> type="radio" id="radio2" name="gender" value="female" class="form-check-input">Female
-                                            </label>
-                                        </div>
-                                        <div class="radio">
-                                            <label for="radio3" class="form-check-label ">
-                                                <input <?= $member['gender'] ?> type="radio" id="radio3" name="gender" value="other" class="form-check-input">Others
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
+                                <div class="col col-md-3"><label for="email-input" class=" form-control-label">E-mail (username):</label></div>
+                                <div class="col-12 col-md-9"><input type="email" id="email-input" name="email" value="<?= $member['email'] ?>" class="form-control"></div>
+                            </div>
+                            <div class="row form-group">
+                            <div class="col col-md-3"><label for="mobile-input" class=" form-control-label">Contact Number :</label></div>
+                            <div class="col-12 col-md-9"><input type="text" id="mobile-input" name="mobile" value="<?= $member['mobile'] ?>" class="form-control"></div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col col-md-3"><label for="password-input" class=" form-control-label">Password :</label></div>
+                                <div class="col-12 col-md-9"><input type="password" id="password-input" name="password" value="<?= $member['password'] ?>" class="form-control"></div>
                             </div>
                             <div class="card-footer">
                                 <button type="submit" class="btn btn-primary btn-sm">

@@ -38,43 +38,29 @@
                 <div class="card-body card-block">
                     <form action="memberSignup" method="POST" enctype="multipart/form-data" class="form-horizontal">
                         <div class="row form-group">
-                            <div class="col col-md-3"><label for="text-input" class=" form-control-label">Name :</label></div>
-                            <div class="col-12 col-md-9"><input type="text" id="text-input" name="name" placeholder="enter your name" class="form-control"></div>
-                        </div>
-                        <div class="row form-group">
-                            <div class="col col-md-3"><label for="email-input" class=" form-control-label">Email :</label></div>
-                            <div class="col-12 col-md-9"><input type="email" id="email-input" name="email" placeholder="Please enter your email" class="form-control"></div>
-                        </div>
-                        <div class="row form-group">
-                            <div class="col col-md-3"><label for="password-input" class=" form-control-label">Password :</label></div>
-                            <div class="col-12 col-md-9"><input type="password" id="password-input" name="password" placeholder="Please enter a complex password" class="form-control"></div>
+                            <div class="col col-md-3"><label for="text-input" class=" form-control-label">Full Name :</label></div>
+                            <div class="col-12 col-md-9"><input type="text" id="text-input" name="name" placeholder="Enter your ful name" class="form-control"></div>
                         </div>
                         <div class="row form-group">
                             <div class="col col-md-3"><label for="textarea-input" class=" form-control-label">Address :</label></div>
                             <div class="col-12 col-md-9"><textarea name="address" id="textarea-input" rows="5" placeholder="Enter your address" class="form-control"></textarea></div>
                         </div>
                         <div class="row form-group">
-                            <div class="col col-md-3"><label class=" form-control-label">Gender :</label></div>
-                            <div class="col col-md-9">
-                                <div class="form-check">
-                                    <div class="radio">
-                                        <label for="radio1" class="form-check-label ">
-                                            <input type="radio" id="radio1" name="gender" value="male" class="form-check-input">Male
-                                        </label>
-                                    </div>
-                                    <div class="radio">
-                                        <label for="radio2" class="form-check-label ">
-                                            <input type="radio" id="radio2" name="gender" value="female" class="form-check-input">Female
-                                        </label>
-                                    </div>
-                                    <div class="radio">
-                                        <label for="radio3" class="form-check-label ">
-                                            <input type="radio" id="radio3" name="gender" value="other" class="form-check-input">Others
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
+                            <div class="col col-md-3"><label for="email-input" class=" form-control-label">E-mail (username) :</label></div>
+                            <div class="col-12 col-md-9"><input type="email" id="email-input" name="email" placeholder="Please enter your email address" class="form-control"></div>
                         </div>
+                        <div class="row form-group">
+                            <div class="col col-md-3"><label for="mobile-input" class=" form-control-label">Contact Number :</label></div>
+                            <div class="col-12 col-md-9"><input type="text" id="mobile-input" name="mobile" placeholder="Please enter your contact number" class="form-control"></div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col col-md-3"><label for="password-input" class=" form-control-label">Password :</label></div>
+                            <div class="col-12 col-md-9"><input type="password" id="password-input" name="password" placeholder="Please enter a complex password" class="form-control"></div>
+                        </div>
+                        <!-- <div class="row form-group">
+                            <div class="col col-md-3"><label for="password-input" class=" form-control-label">Password :</label></div>
+                            <div class="col-12 col-md-9"><input type="password" id="password-input" name="password" placeholder="Please enter a complex password" class="form-control"></div>
+                        </div> -->
                         <div class="card-footer">
                             <button type="submit" class="btn btn-primary btn-sm">
                                     <i class="fa fa-dot-circle-o"></i> <strong>Submit</strong>

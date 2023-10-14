@@ -16,6 +16,7 @@ class MealController extends BaseController
         $signUp = new MealModel();
         $data = 
         [
+            'date'=>$this->request->getPost('date'),
             'bfast'=>$this->request->getPost('bfast'),
             'lunch'=>$this->request->getPost('lunch'),
             'dinner'=>$this->request->getPost('dinner'),
@@ -30,6 +31,10 @@ class MealController extends BaseController
         $view = new MealModel();
         $data['meal'] = $view->orderBy('m_id', 'DESC')->findAll();
         return view('pages/meal/mealView', $data);
+
+        $meal = new MealModel();
+        $result = $meal->select('sum(bfast + lunch + dinner) as Quantities')->first();
+		$data['meal'] = $result['Quantities'];
     }
 
     //Delete data
@@ -54,6 +59,7 @@ class MealController extends BaseController
         $update=  new MealModel();
         $data = 
         [
+            'date'=>$this->request->getPost('date'),
             'bfast'=>$this->request->getPost('bfast'),
             'lunch'=>$this->request->getPost('lunch'),
             'dinner'=>$this->request->getPost('dinner'),
