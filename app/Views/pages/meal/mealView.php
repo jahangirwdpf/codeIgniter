@@ -58,11 +58,11 @@
                                                 <tr>
                                                     <td><?= $row['m_id']?></td>
                                                     <td><?= $row['date']?></td>
-                                                    <td><?= '' ?></td>
+                                                    <td><?= $row['member_id'] ?></td>
                                                     <td><?= $row['bfast']?></td>
                                                     <td><?= $row['lunch']?></td>
                                                     <td><?= $row['dinner']?></td>
-                                                    <td> <?= '' ?></td>
+                                                    <td> <?= $row['bfast']+$row['lunch']+$row['dinner'] ?></td>
                                                     <td class="text-center"><a href="<?= base_url() ?>meal/edit/<?= $row['m_id']?>" class="btn btn-success">Edit</a</td>
                                                     <td class="text-center"><a href="meal/delete/<?= $row['m_id']?>" class="btn btn-danger">Delete</a</td>
                                                 </tr>

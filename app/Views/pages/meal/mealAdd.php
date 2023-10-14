@@ -37,14 +37,17 @@
                 </div>
                 <div class="card-body card-">
                     <form action="mealAdd" method="POST" enctype="multipart1/form-data" class="form-horizontal">
-                        <!-- <div class="row form-group d-flex text-center">
+                        <div class="row form-group d-flex text-center">
                             <div class="col col-md-3">
                                 <label for="date-input" class=" form-control-label">Select Member :</label>
+                                <select class="form-select" aria-label="Default select example" name="member_id">
+                                    <option selected>Select a Member</option>
+                                    <?php foreach ($member as $row) :?>
+                                    <option value="<?= $row['id']?>"><?= $row['name']?></option>
+                                    <?php endforeach?>
+                                </select>   
                             </div>
-                            <div class="col-12 col-md-9">
-                                <input type="date" id="date-input" name="date" class="form-control">
-                            </div>
-                        </div> -->
+                        </div>
                         <div class="row form-group d-flex text-center">
                             <div class="col col-md-3">
                                 <label for="date-input" class=" form-control-label">Date :</label>

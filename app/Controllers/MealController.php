@@ -2,12 +2,15 @@
 namespace App\Controllers;
 use App\Controllers\BaseController;
 use App\Models\MealModel;
+use App\Models\UserModel;
 
 class MealController extends BaseController
 {
     public function index()
     {
-        return view('pages/meal/mealAdd');
+        $user = new UserModel;
+        $data['member'] = $user->orderBy('id', 'DESC')->findAll();
+        return view('pages/meal/mealAdd',$data);
     }
 
     //Add Data
@@ -20,6 +23,7 @@ class MealController extends BaseController
             'bfast'=>$this->request->getPost('bfast'),
             'lunch'=>$this->request->getPost('lunch'),
             'dinner'=>$this->request->getPost('dinner'),
+            'member_id'=>$this->request->getPost('member_id'),
         ];
         $signUp->save($data);
         return redirect('mealAdd');
@@ -63,6 +67,7 @@ class MealController extends BaseController
             'bfast'=>$this->request->getPost('bfast'),
             'lunch'=>$this->request->getPost('lunch'),
             'dinner'=>$this->request->getPost('dinner'),
+            'member_id'=>$this->request->getPost('member_id'),
         ];
         $update->update($meal_id, $data);
         return redirect('mealView');

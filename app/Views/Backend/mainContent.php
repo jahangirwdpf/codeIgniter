@@ -60,12 +60,7 @@
                                     <div class="text-left dib">
                                         <div class="stat-text">
                                             <span class="count">
-<<<<<<< HEAD
                                                <?= $count ?> 
-=======
-                                               <?= $count ?>
-                                               
->>>>>>> 09dbc2862e807c9ef85cfcf3b05a584eb1783e59
                                             </span>
                                         </div>
                                         <div class="stat-heading">Total Members</div>
@@ -107,11 +102,7 @@
                                 <div class="stat-content">
                                     <div class="text-left dib">
                                         <div class="stat-text"><span class="count">
-<<<<<<< HEAD
                                             <?= $total ?>
-=======
-                                            <?= $total?>
->>>>>>> 09dbc2862e807c9ef85cfcf3b05a584eb1783e59
                                         </span></div>
                                         <div class="stat-heading">Total <br> Meal</div>
                                     </div>

@@ -56,6 +56,6 @@ $routes->get('meal/edit/(:num)', 'MealController::edit/$1');
 $routes->put('meal/update/(:num)', 'MealController::update/$1'); 
 
 // Reports Routes
-$routes->get('reportsS', 'ReportsController::index');
+$routes->get('reportS', 'ReportsController::index');
 $routes->get('reportI', 'ReportsController::reportI');
 

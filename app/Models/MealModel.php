@@ -11,7 +11,7 @@ class MealModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['date', 'bfast', 'lunch', 'dinner',];
+    protected $allowedFields    = ['date', 'bfast', 'lunch', 'dinner', 'member_id',];
 
     // Dates
     protected $useTimestamps = false;
