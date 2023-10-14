@@ -68,7 +68,11 @@ class MemberAdd extends BaseController
     // fetch data for dashboard 
     public function fetchmemberDash()
     {
+<<<<<<< HEAD
         $data['member'] = $member->orderBy('id', $member_id)->findAll();
+=======
+        $data['member'] = $member->orderBy('m_id', $member_id)->findAll();
+>>>>>>> 9a9c065abbeac9a92ed18201fb93dea79dba00ac
 
         return redirect('memberView', $data);
     }

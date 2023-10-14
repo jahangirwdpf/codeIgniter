@@ -1,0 +1,207 @@
+ERROR - 2023-10-14 03:20:55 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in E:\xampp\htdocs\Codeigniter_project\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 E:\xampp\htdocs\Codeigniter_project\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'bachelor_point', 3306, '', 0)
+#1 E:\xampp\htdocs\Codeigniter_project\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 E:\xampp\htdocs\Codeigniter_project\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 E:\xampp\htdocs\Codeigniter_project\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\xampp\htdocs\Codeigniter_project\system\Model.php(871): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\xampp\htdocs\Codeigniter_project\app\Controllers\Dashboard.php(13): CodeIgniter\Model->__call('get', Array)
+#6 E:\xampp\htdocs\Codeigniter_project\system\CodeIgniter.php(919): App\Controllers\Dashboard->index()
+#7 E:\xampp\htdocs\Codeigniter_project\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#8 E:\xampp\htdocs\Codeigniter_project\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\xampp\htdocs\Codeigniter_project\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 E:\xampp\htdocs\Codeigniter_project\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in E:\xampp\htdocs\Codeigniter_project\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 E:\xampp\htdocs\Codeigniter_project\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 E:\xampp\htdocs\Codeigniter_project\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 E:\xampp\htdocs\Codeigniter_project\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 E:\xampp\htdocs\Codeigniter_project\system\Model.php(871): CodeIgniter\Database\BaseBuilder->get()
+#4 E:\xampp\htdocs\Codeigniter_project\app\Controllers\Dashboard.php(13): CodeIgniter\Model->__call('get', Array)
+#5 E:\xampp\htdocs\Codeigniter_project\system\CodeIgniter.php(919): App\Controllers\Dashboard->index()
+#6 E:\xampp\htdocs\Codeigniter_project\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#7 E:\xampp\htdocs\Codeigniter_project\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\xampp\htdocs\Codeigniter_project\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 E:\xampp\htdocs\Codeigniter_project\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-10-14 03:20:55 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `member`', [], false)
+ 3 SYSTEMPATH\Model.php(871): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\Dashboard.php(13): CodeIgniter\Model->__call('get', [])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Dashboard->index()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs\\Codeigniter_project\\public\\index.php')
+CRITICAL - 2023-10-14 03:24:32 --> syntax error, unexpected token "<<"
+in APPPATH\Controllers\Dashboard.php on line 23.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('E:\\xampp\\htdocs\\Codeigniter_project\\app\\Controllers\\Dashboard.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Dashboard')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Dashboard')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\Dashboard', true)
+ 5 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs\\Codeigniter_project\\public\\index.php')
+CRITICAL - 2023-10-14 06:18:11 --> Undefined variable $member
+in APPPATH\Controllers\MealController.php on line 12.
+ 1 APPPATH\Controllers\MealController.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $member', 'E:\\xampp\\htdocs\\Codeigniter_project\\app\\Controllers\\MealController.php', 12)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MealController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MealController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs\\Codeigniter_project\\public\\index.php')
+ERROR - 2023-10-14 06:18:44 --> mysqli_sql_exception: Unknown column 'm_id' in 'order clause' in E:\xampp\htdocs\Codeigniter_project\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\xampp\htdocs\Codeigniter_project\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\xampp\htdocs\Codeigniter_project\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\xampp\htdocs\Codeigniter_project\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\xampp\htdocs\Codeigniter_project\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\xampp\htdocs\Codeigniter_project\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\xampp\htdocs\Codeigniter_project\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 E:\xampp\htdocs\Codeigniter_project\app\Controllers\MealController.php(12): CodeIgniter\BaseModel->findAll()
+#7 E:\xampp\htdocs\Codeigniter_project\system\CodeIgniter.php(919): App\Controllers\MealController->index()
+#8 E:\xampp\htdocs\Codeigniter_project\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MealController))
+#9 E:\xampp\htdocs\Codeigniter_project\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\xampp\htdocs\Codeigniter_project\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 E:\xampp\htdocs\Codeigniter_project\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-10-14 06:18:44 --> Unknown column 'm_id' in 'order clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `member`
+ORDER BY `m_id` DESC', [], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\MealController.php(12): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MealController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MealController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs\\Codeigniter_project\\public\\index.php')
+CRITICAL - 2023-10-14 06:20:03 --> Undefined variable $meal
+in APPPATH\Views\pages\meal\mealAdd.php on line 45.
+ 1 APPPATH\Views\pages\meal\mealAdd.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $meal', 'E:\\xampp\\htdocs\\Codeigniter_project\\app\\Views\\pages\\meal\\mealAdd.php', 45)
+ 2 SYSTEMPATH\View\View.php(226): include('E:\\xampp\\htdocs\\Codeigniter_project\\app\\Views\\pages\\meal\\mealAdd.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('pages/meal/mealAdd', [], true)
+ 5 APPPATH\Controllers\MealController.php(13): view('pages/meal/mealAdd', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MealController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MealController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs\\Codeigniter_project\\public\\index.php')
+CRITICAL - 2023-10-14 06:20:18 --> Undefined variable $data
+in APPPATH\Views\pages\meal\mealAdd.php on line 45.
+ 1 APPPATH\Views\pages\meal\mealAdd.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'E:\\xampp\\htdocs\\Codeigniter_project\\app\\Views\\pages\\meal\\mealAdd.php', 45)
+ 2 SYSTEMPATH\View\View.php(226): include('E:\\xampp\\htdocs\\Codeigniter_project\\app\\Views\\pages\\meal\\mealAdd.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('pages/meal/mealAdd', [], true)
+ 5 APPPATH\Controllers\MealController.php(13): view('pages/meal/mealAdd', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MealController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MealController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs\\Codeigniter_project\\public\\index.php')
+CRITICAL - 2023-10-14 06:20:20 --> Undefined variable $data
+in APPPATH\Views\pages\meal\mealAdd.php on line 45.
+ 1 APPPATH\Views\pages\meal\mealAdd.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'E:\\xampp\\htdocs\\Codeigniter_project\\app\\Views\\pages\\meal\\mealAdd.php', 45)
+ 2 SYSTEMPATH\View\View.php(226): include('E:\\xampp\\htdocs\\Codeigniter_project\\app\\Views\\pages\\meal\\mealAdd.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('pages/meal/mealAdd', [], true)
+ 5 APPPATH\Controllers\MealController.php(13): view('pages/meal/mealAdd', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MealController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MealController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs\\Codeigniter_project\\public\\index.php')
+CRITICAL - 2023-10-14 06:20:21 --> Undefined variable $data
+in APPPATH\Views\pages\meal\mealAdd.php on line 45.
+ 1 APPPATH\Views\pages\meal\mealAdd.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'E:\\xampp\\htdocs\\Codeigniter_project\\app\\Views\\pages\\meal\\mealAdd.php', 45)
+ 2 SYSTEMPATH\View\View.php(226): include('E:\\xampp\\htdocs\\Codeigniter_project\\app\\Views\\pages\\meal\\mealAdd.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('pages/meal/mealAdd', [], true)
+ 5 APPPATH\Controllers\MealController.php(13): view('pages/meal/mealAdd', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MealController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MealController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs\\Codeigniter_project\\public\\index.php')
+CRITICAL - 2023-10-14 06:20:21 --> Undefined variable $data
+in APPPATH\Views\pages\meal\mealAdd.php on line 45.
+ 1 APPPATH\Views\pages\meal\mealAdd.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'E:\\xampp\\htdocs\\Codeigniter_project\\app\\Views\\pages\\meal\\mealAdd.php', 45)
+ 2 SYSTEMPATH\View\View.php(226): include('E:\\xampp\\htdocs\\Codeigniter_project\\app\\Views\\pages\\meal\\mealAdd.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('pages/meal/mealAdd', [], true)
+ 5 APPPATH\Controllers\MealController.php(13): view('pages/meal/mealAdd', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MealController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MealController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs\\Codeigniter_project\\public\\index.php')
+ERROR - 2023-10-14 06:29:01 --> mysqli_sql_exception: Unknown column 'date' in 'field list' in E:\xampp\htdocs\Codeigniter_project\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\xampp\htdocs\Codeigniter_project\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `me...', 0)
+#1 E:\xampp\htdocs\Codeigniter_project\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `me...')
+#2 E:\xampp\htdocs\Codeigniter_project\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `me...')
+#3 E:\xampp\htdocs\Codeigniter_project\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `me...', Array, false)
+#4 E:\xampp\htdocs\Codeigniter_project\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 E:\xampp\htdocs\Codeigniter_project\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 E:\xampp\htdocs\Codeigniter_project\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#7 E:\xampp\htdocs\Codeigniter_project\system\BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#8 E:\xampp\htdocs\Codeigniter_project\app\Controllers\MealController.php(27): CodeIgniter\BaseModel->save(Array)
+#9 E:\xampp\htdocs\Codeigniter_project\system\CodeIgniter.php(919): App\Controllers\MealController->mealAdd()
+#10 E:\xampp\htdocs\Codeigniter_project\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MealController))
+#11 E:\xampp\htdocs\Codeigniter_project\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 E:\xampp\htdocs\Codeigniter_project\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 E:\xampp\htdocs\Codeigniter_project\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2023-10-14 06:29:01 --> Unknown column 'date' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `meal` (`date`, `bfast`, `lunch`, `dinner`) VALUES (:date:, :bfast:, :lunch:, :dinner:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(698): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\MealController.php(27): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MealController->mealAdd()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MealController))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs\\Codeigniter_project\\public\\index.php')
+ERROR - 2023-10-14 06:29:20 --> mysqli_sql_exception: Unknown column 'date' in 'field list' in E:\xampp\htdocs\Codeigniter_project\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\xampp\htdocs\Codeigniter_project\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `me...', 0)
+#1 E:\xampp\htdocs\Codeigniter_project\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `me...')
+#2 E:\xampp\htdocs\Codeigniter_project\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `me...')
+#3 E:\xampp\htdocs\Codeigniter_project\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `me...', Array, false)
+#4 E:\xampp\htdocs\Codeigniter_project\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 E:\xampp\htdocs\Codeigniter_project\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 E:\xampp\htdocs\Codeigniter_project\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#7 E:\xampp\htdocs\Codeigniter_project\system\BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#8 E:\xampp\htdocs\Codeigniter_project\app\Controllers\MealController.php(27): CodeIgniter\BaseModel->save(Array)
+#9 E:\xampp\htdocs\Codeigniter_project\system\CodeIgniter.php(919): App\Controllers\MealController->mealAdd()
+#10 E:\xampp\htdocs\Codeigniter_project\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MealController))
+#11 E:\xampp\htdocs\Codeigniter_project\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 E:\xampp\htdocs\Codeigniter_project\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 E:\xampp\htdocs\Codeigniter_project\system\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2023-10-14 06:29:20 --> Unknown column 'date' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `meal` (`date`, `bfast`, `lunch`, `dinner`) VALUES (:date:, :bfast:, :lunch:, :dinner:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(698): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\MealController.php(27): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MealController->mealAdd()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MealController))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\xampp\\htdocs\\Codeigniter_project\\public\\index.php')

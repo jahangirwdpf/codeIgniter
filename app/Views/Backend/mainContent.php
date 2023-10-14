@@ -60,7 +60,11 @@
                                     <div class="text-left dib">
                                         <div class="stat-text">
                                             <span class="count">
+<<<<<<< HEAD
                                                <?= $memberSum ?> 
+=======
+                                               <?= $count ?> 
+>>>>>>> 9a9c065abbeac9a92ed18201fb93dea79dba00ac
                                             </span>
                                         </div>
                                         <div class="stat-heading">Total Members</div>
@@ -102,7 +106,11 @@
                                 <div class="stat-content">
                                     <div class="text-left dib">
                                         <div class="stat-text"><span class="count">
+<<<<<<< HEAD
                                             <?= $purSum ?>
+=======
+                                            <?= $total ?>
+>>>>>>> 9a9c065abbeac9a92ed18201fb93dea79dba00ac
                                         </span></div>
                                         <div class="stat-heading">Total <br> Purchase</div>
                                     </div>

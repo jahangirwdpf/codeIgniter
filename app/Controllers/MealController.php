@@ -24,6 +24,7 @@ class MealController extends BaseController
             'bfast'=>$this->request->getPost('bfast'),
             'lunch'=>$this->request->getPost('lunch'),
             'dinner'=>$this->request->getPost('dinner'),
+            'member_id'=>$this->request->getPost('member_id'),
         ];
         $signUp->save($data);
         return redirect('mealAdd');
@@ -68,6 +69,7 @@ class MealController extends BaseController
             'bfast'=>$this->request->getPost('bfast'),
             'lunch'=>$this->request->getPost('lunch'),
             'dinner'=>$this->request->getPost('dinner'),
+            'member_id'=>$this->request->getPost('member_id'),
         ];
         $update->update($meal_id, $data);
         return redirect('mealView');
