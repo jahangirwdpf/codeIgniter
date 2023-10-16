@@ -80,7 +80,7 @@
                                 <table id="bootstrap-data-table" class="table table-striped table-bordered">
                                     <thead>
                                         <tr class="text-center">
-                                            <th>Total Coast of this Month.</th>
+                                            <th>Total Cost of this Month.</th>
                                         </tr>
                                     </thead>
                                     <tbody>

@@ -49,6 +49,7 @@
                                             <th>Bua Bill</th>
                                             <th>City Corpo. Bill</th>
                                             <th>Total</th>
+                                            <th>Perhead cost</th>
                                             <th colspan='2' >Action</th>
                                         </tr>
                                     </thead>
@@ -62,9 +63,14 @@
                                                     <td><?= $row['wifi']?></td>
                                                     <td><?= $row['bua']?></td>
                                                     <td><?= $row['city']?></td>
+
                                                     <td><?= $row['rent'] + $row['gas'] + $row['current'] + $row['wifi'] + $row['bua'] + $row['city']
                                                     ?></td>
+                                                    
+                                                    <td class="text-center"><?= ($row['rent'] + $row['gas'] + $row['current'] + $row['wifi'] + $row['bua'] + $row['city'])/$memberSum ?></td>
+                                                    
                                                     <td class="text-center"><a href="<?= base_url() ?>rent/edit/<?= $row['id']?>" class="btn btn-success"><i class="fa fa-pencil"></i></a</td>
+                                                    
                                                     <td class="text-center"><a href="rent/delete/<?= $row['id']?>" class="btn btn-danger"><i class="fa fa-trash"></a</td>
                                                 </tr>
                                             <?php endforeach; ?>

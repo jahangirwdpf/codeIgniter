@@ -3,25 +3,25 @@ use CodeIgniter\Router\RouteCollection;
 /**
  * @var RouteCollection $routes
  */
-// Fornend Routes
-$routes->get('/', 'Home::index');
+// Forntend Routes
+$routes->get('/', 'HomeController::index');
 $routes->get('login', 'Login::index');
-$routes->get('footer', 'Home::footer');
+$routes->get('footer', 'HomeController::footer');
 $routes->get('signUp', 'Login::signUp');
-$routes->get('about', 'Home::about');
-$routes->get('gallery', 'Home::gallery');
-$routes->get('contact', 'Home::contact');
+$routes->get('about', 'HomeController::about');
+$routes->get('gallery', 'HomeController::gallery');
+$routes->get('contact', 'HomeController::contact'); 
 
 // Backend Routes
 $routes->get('dashboard', 'DashboardController::index');
 
 // Member Routes
-$routes->get('memberAdd', 'MemberAdd::index');
-$routes->post('memberSignup', 'MemberAdd::memberSignup');
-$routes->get('memberView', 'MemberAdd::fetchmember');
-$routes->get('member/edit/(:num)', 'MemberAdd::Edit/$1');
-$routes->put('member/update/(:num)', 'MemberAdd::update/$1');
-$routes->get('member/delete/(:num)', 'MemberAdd::delete/$1');
+$routes->get('memberAdd', 'MemberController::index');
+$routes->post('memberSignup', 'MemberController::memberSignup');
+$routes->get('memberView', 'MemberController::fetchmember');
+$routes->get('member/edit/(:num)', 'MemberController::Edit/$1');
+$routes->put('member/update/(:num)', 'MemberController::update/$1');
+$routes->get('member/delete/(:num)', 'MemberController::delete/$1');
 
 // House Rent Routes
 $routes->get('rentAdd', 'RentController::index');
@@ -58,4 +58,5 @@ $routes->put('meal/update/(:num)', 'MealController::update/$1');
 // Reports Routes
 $routes->get('reportS', 'ReportsController::index');
 $routes->get('reportI', 'ReportsController::reportI');
+$routes->get('report/(:num)', 'ReportsController::Edit/$1');
 

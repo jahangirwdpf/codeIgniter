@@ -37,22 +37,7 @@
                 </div>
                 <div class="card-body card-">
                     <form action="mealAdd" method="POST" enctype="multipart1/form-data" class="form-horizontal">
-<<<<<<< HEAD
                         <div class="row form-group d-flex">
-=======
-                        <div class="row form-group d-flex text-center">
-                            <div class="col col-md-3">
-                                <label for="date-input" class=" form-control-label">Select Member :</label>
-                                <select class="form-select" aria-label="Default select example" name="member_id">
-                                    <option selected>Select a Member</option>
-                                    <?php foreach ($member as $row) :?>
-                                    <option value="<?= $row['id']?>"><?= $row['name']?></option>
-                                    <?php endforeach?>
-                                </select>   
-                            </div>
-                        </div>
-                        <div class="row form-group d-flex text-center">
->>>>>>> 9a9c065abbeac9a92ed18201fb93dea79dba00ac
                             <div class="col col-md-3">
                                 <label for="date-input" class=" form-control-label">Date :</label>
                             </div>

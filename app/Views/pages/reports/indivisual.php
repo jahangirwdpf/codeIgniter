@@ -38,8 +38,21 @@
                             <div class="card-header">
                                 <strong class="card-title">Reports of (September)</strong>
                             </div>
+
+                            <div class="card-body card-block">
+                                <form action="<?= base_url(); ?>member/update/<?= $memberI['id'] ?>" method="POST" enctype="multipart/form-data" class="form-horizontal">
+                                    <div class="col-12 col-md-9"><input type="hidden" id="text-input" name="_method" value="PUT" class="form-control"></div>
+                                        <div class="row form-group">
+                                            <div class="col col-md-3"><label for="text-input" class=" form-control-label">Full Name :</label></div>
+                                            <div class="col-12 col-md-9"><input type="text" id="text-input" name="name" value="<?= $memberI['name'] ?>" class="form-control"></div>
+                                        </div>
+                                </form>
+                            </div>
+
+
+
                             <div class="card-body">
-                            <table id="bootstrap-data-table" class="table table-striped table-bordered">
+                                <table id="bootstrap-data-table" class="table table-striped table-bordered">
                                     <thead>
                                         <tr class="text-center">
                                             <th>Meal</th>
@@ -49,14 +62,14 @@
                                     </thead>
                                     <tbody>
                                         <tr class="text-center">
-                                            <td><?= $sum ?></td>
-                                            <td><?= $total ?></td>
-                                            <td><?= $total ?></td>
+                                            <td><?= $mealSum?></td>
+                                            <td></td>
+                                            <td></td>
                                         </tr>
                                     </tbody>
                                     <thead>
                                         <tr class="text-center">
-                                            <th>Other Cost</th>
+                                            <th>House Rent</th>
                                             <th>Total Cost</th>
                                             <th>Due</th>
                                         </tr>

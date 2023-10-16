@@ -57,10 +57,6 @@
                             <div class="col col-md-3"><label for="password-input" class=" form-control-label">Password :</label></div>
                             <div class="col-12 col-md-9"><input type="password" id="password-input" name="password" placeholder="Please enter a complex password" class="form-control"></div>
                         </div>
-                        <!-- <div class="row form-group">
-                            <div class="col col-md-3"><label for="password-input" class=" form-control-label">Password :</label></div>
-                            <div class="col-12 col-md-9"><input type="password" id="password-input" name="password" placeholder="Please enter a complex password" class="form-control"></div>
-                        </div> -->
                         <div class="card-footer">
                             <button type="submit" class="btn btn-primary btn-sm">
                                     <i class="fa fa-dot-circle-o"></i> <strong>Submit</strong>

@@ -2,6 +2,7 @@
 namespace App\Controllers;
 use CodeIgniter\Controller;
 use App\Models\RentModel;
+use App\Models\UserModel;
 
 class RentController extends BaseController
 {
@@ -28,6 +29,9 @@ class RentController extends BaseController
 
     public function fetchrent()
     {
+        $member = new UserModel();
+		$data['memberSum'] = $member->get()->getNumRows();
+
         $rent = new RentModel();
         $data['rent'] = $rent->orderBy('id', 'DESC')->findAll();
         return view('pages/houseRent/rentView', $data);

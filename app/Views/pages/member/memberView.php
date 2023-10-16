@@ -47,7 +47,7 @@
                                             <th>Address</th>
                                             <th>E-mail (suername)</th>
                                             <th>Mobile</th>
-                                            <th colspan='2' >Action</th>
+                                            <th colspan='3' >Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -59,6 +59,7 @@
                                                     <td><?= $row['address']?></td>
                                                     <td><?= $row['email']?></td>
                                                     <td><?= $row['mobile']?></td>
+                                                    <td class="text-center"><a href="<?= base_url() ?>report/<?= $row['id']?>" class="btn btn-warning"><i class="fa fa-eye"></a</td>
                                                     <td class="text-center"><a href="<?= base_url() ?>member/edit/<?= $row['id']?>" class="btn btn-success"><i class="fa fa-pencil"></i></a</td>
                                                     <td class="text-center"><a href="member/delete/<?= $row['id']?>" class="btn btn-danger"><i class="fa fa-trash"></a</td>
                                                 </tr>

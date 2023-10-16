@@ -62,15 +62,9 @@
                                                     <td><?= $row['bfast']?></td>
                                                     <td><?= $row['lunch']?></td>
                                                     <td><?= $row['dinner']?></td>
-<<<<<<< HEAD
                                                     <td> <?= $row['bfast'] + $row['lunch'] + $row['dinner'] ?></td>
                                                     <td class="text-center"><a href="<?= base_url() ?>meal/edit/<?= $row['m_id']?>" class="btn btn-success"><i class="fa fa-pencil"></i></a</td>
                                                     <td class="text-center"><a href="meal/delete/<?= $row['m_id']?>" class="btn btn-danger"><i class="fa fa-trash"></a</td>
-=======
-                                                    <td> <?= $row['bfast']+$row['lunch']+$row['dinner'] ?></td>
-                                                    <td class="text-center"><a href="<?= base_url() ?>meal/edit/<?= $row['m_id']?>" class="btn btn-success">Edit</a</td>
-                                                    <td class="text-center"><a href="meal/delete/<?= $row['m_id']?>" class="btn btn-danger">Delete</a</td>
->>>>>>> 9a9c065abbeac9a92ed18201fb93dea79dba00ac
                                                 </tr>
                                             <?php endforeach; ?>
                                         <?php endif; ?>
