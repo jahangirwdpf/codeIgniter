@@ -31,7 +31,20 @@ class ReportsController extends BaseController
         return view('pages/reports/monthly_summary',$data);
     }
 
+<<<<<<< HEAD
     // Invisual Summary
+=======
+    // Indivisual Summary
+    public function reportI($member_id = null)
+    {
+        $member = new UserModel();
+        $data['memberI'] = $member->where('id', $member_id)->first();
+
+        return view('pages/reports/indivisual', $data);
+    }
+
+    // Edit
+>>>>>>> fe8e07f1a35eb79767973f7049d1b7aeb3f795e0
     public function Edit($member_id = null)
     {
         $member = new UserModel();
@@ -47,8 +60,9 @@ class ReportsController extends BaseController
 		$data['memberSum'] = $member->get()->getNumRows();
 
         $meal = new MealModel();
-        $result = $meal->select('sum(bfast + lunch + dinner) as sumQuantities')->first();
+        $result = $meal->select('sum(bfast + lunch + dinner) as sumQuantities')->where('member_id', $member_id)->first();
 		$data['mealSum'] = $result['sumQuantities'];
+<<<<<<< HEAD
 
         $meal = new MealModel();
         $result = $meal->select('sum(bfast + lunch + dinner) as sumQuantities')->where('member_id', $member_id)->first();
@@ -74,6 +88,8 @@ class ReportsController extends BaseController
         $result = $purchase->select('sum(price) as sumQuantities')->where('member_id', $member_id)->first();
 		$data['pur_I'] = $result['sumQuantities'];
 
+=======
+>>>>>>> fe8e07f1a35eb79767973f7049d1b7aeb3f795e0
         return view('pages/reports/indivisual', $data);
     }
 

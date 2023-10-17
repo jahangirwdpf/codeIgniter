@@ -51,8 +51,17 @@
                                     </tbody>
                                 </table>
 
+<<<<<<< HEAD
+=======
+                        
+
+
+
+                            <div class="card-body">
+>>>>>>> fe8e07f1a35eb79767973f7049d1b7aeb3f795e0
                                 <table id="bootstrap-data-table" class="table table-striped table-bordered">
                                     <thead>
+                                    
                                         <tr class="text-center">
                                             <th>Meal</th>
                                             <th>Meal Cost</th>
@@ -61,9 +70,15 @@
                                     </thead>
                                     <tbody>
                                         <tr class="text-center">
+<<<<<<< HEAD
                                             <td><?= $meal_I ?></td>
                                             <td><?= ($purSum/$mealSum) * $meal_I ?></td>
                                             <td><?= ($rentSum + $depSum)/$memberSum ?></td>
+=======
+                                            <td><?= $mealSum ?></td>
+                                            <td></td>
+                                            <td></td>
+>>>>>>> fe8e07f1a35eb79767973f7049d1b7aeb3f795e0
                                         </tr>
                                     </tbody>
                                     <thead>
