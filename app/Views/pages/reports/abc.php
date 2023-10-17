@@ -29,8 +29,8 @@
         </div>
     </div>
     
-        <!----------------------- Start Content ------------------------------------>
-        <!-- <div class="col-lg-11 float-left p-3 3 mx-5 ">
+        <!-- --------------------- Start Content ------------------------------------>
+        <div class="col-lg-11 float-left p-3 3 mx-5 ">
             <div class="card justify-content-center">
                 <div class="card-header">
                     <strong>Member Information</strong>
@@ -40,7 +40,7 @@
                         <div class="col-12 col-md-9"><input type="hidden" id="text-input" name="_method" value="PUT" class="form-control"></div>
                             <div class="row form-group">
                                 <div class="col col-md-3"><label for="text-input" class=" form-control-label">Full Name :</label></div>
-                                <div class="col-12 col-md-9"><input type="text" id="text-input" name="name" value="" class="form-control"></div>
+                                <div class="col-12 col-md-9"><input type="text" id="text-input" name="name" value="<?= $memberI['name'] ?>" class="form-control"></div>
                             </div>
                             <div class="card-footer">
                                 <button type="submit" class="btn btn-primary btn-sm">
@@ -50,7 +50,7 @@
                     </form>
                 </div>
             </div>
-        </div> -->
+        </div>
 
 <!--------------------------------- End Content ----------------------------->
 <?= $this->include('Backend/footerB');?>

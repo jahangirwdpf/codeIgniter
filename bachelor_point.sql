@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 16, 2023 at 10:24 PM
+-- Generation Time: Oct 17, 2023 at 09:19 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -40,10 +40,11 @@ CREATE TABLE `deposite` (
 --
 
 INSERT INTO `deposite` (`d_id`, `date`, `member_id`, `deposite`, `price`) VALUES
-(2, '2023-10-11', 2, 'Light', 650),
-(3, '2023-10-11', 1, 'dd', 500),
+(2, '2023-10-11', 2, 'Light', 350),
 (6, '2023-10-10', 4, 'Apple', 380),
-(7, '2023-10-13', 1, 'Switch', 85);
+(8, '2023-10-17', 1, 'A', 300),
+(9, '2023-10-17', 5, 'S', 500),
+(10, '2023-10-17', 3, 'Fruits', 250);
 
 -- --------------------------------------------------------
 
@@ -153,8 +154,10 @@ CREATE TABLE `purchese` (
 INSERT INTO `purchese` (`p_id`, `date`, `member_id`, `p_des`, `price`) VALUES
 (3, '2023-10-12', 2, 'Rice', 550),
 (4, '2023-10-14', 5, 'Potato', 250),
-(5, '2023-10-10', 6, 'Fish', 750),
-(6, '2023-10-10', 1, 'Rice', 800);
+(5, '2023-10-10', 4, 'Fish', 750),
+(6, '2023-10-10', 1, 'Rice', 800),
+(7, '2023-10-17', 3, 'Meat', 1500),
+(8, '2023-10-17', 1, 'Fish', 645);
 
 -- --------------------------------------------------------
 
@@ -223,7 +226,7 @@ ALTER TABLE `role`
 -- AUTO_INCREMENT for table `deposite`
 --
 ALTER TABLE `deposite`
-  MODIFY `d_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `d_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `house_rent`
@@ -247,7 +250,7 @@ ALTER TABLE `member`
 -- AUTO_INCREMENT for table `purchese`
 --
 ALTER TABLE `purchese`
-  MODIFY `p_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `p_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `role`

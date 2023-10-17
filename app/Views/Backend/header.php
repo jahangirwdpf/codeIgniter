@@ -68,30 +68,21 @@
             <div id="main-menu" class="main-menu collapse navbar-collapse">
                 <ul class="nav navbar-nav">
                     <li class="active">
-                        <a href="dashboard"><i class="menu-icon fa fa-laptop"></i>Dashboard </a>
+                        <a href="<?= base_url() ?>dashboard"><i class="menu-icon fa fa-laptop"></i>Dashboard </a>
                     </li>
                     <li class="menu-title">Members</li><!--------- /.menu-title --------->
                     <li>
                         <a href="memberAdd"> <i class="menu-icon fa fa-plus"></i>Add </a>
                     </li>
-                    <li class="menu-item-has-children dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-users"></i>Details</a>
-                        <ul class="sub-menu children dropdown-menu">
-                            <li><i class="fa fa-user"></i><a href="">Requested Member</a></li>
-                            <li><i class="fa fa-users"></i><a href="memberView">Total Member</a></li>
-                        </ul>
+                    <li>
+                        <a href="<?= base_url() ?>memberView"> <i class="menu-icon fa fa-users"></i>Total Member </a>
                     </li>
                     <li class="menu-title">Meal</li><!--------- /.menu-title --------->
                     <li>
-                      <a href="mealAdd"> <i class="menu-icon fa fa-plus-circle"></i>Add </a>
+                      <a href="<?= base_url() ?>mealAdd"> <i class="menu-icon fa fa-plus-circle"></i>Add </a>
                     </li>
-                    <li class="menu-item-has-children dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-bar-chart"></i>View</a>
-                        <ul class="sub-menu children dropdown-menu">
-                            <li><i class="menu-icon fa fa-line-chart"></i><a href="charts-chartjs.html">Individual Meal</a></li>
-                            <li><i class="menu-icon fa fa-area-chart"></i><a href="mealView">Total Meal</a></li>
-                            <li><i class="menu-icon fa fa-pie-chart"></i><a href="charts-peity.html">Meal Rate</a></li>
-                        </ul>
+                    <li>
+                      <a href="<?= base_url() ?>mealView"> <i class="menu-icon fa fa-eye"></i>View </a>
                     </li>
                     <li class="menu-title">Purchase & Deposite</li> <!------------ /.menu-title ----------------->
                     <li class="menu-item-has-children dropdown">
