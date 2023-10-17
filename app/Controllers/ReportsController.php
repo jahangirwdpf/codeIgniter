@@ -32,8 +32,11 @@ class ReportsController extends BaseController
     }
 
     // Indivisual Summary
-    public function reportI()
+    public function reportI($member_id = null)
     {
+        $member = new UserModel();
+        $data['memberI'] = $member->where('id', $member_id)->first();
+
         return view('pages/reports/indivisual', $data);
     }
 
@@ -41,11 +44,8 @@ class ReportsController extends BaseController
     public function Edit($member_id = null)
     {
         $meal = new MealModel();
-        $result = $meal->select('sum(bfast + lunch + dinner) as sumQuantities')->first();
+        $result = $meal->select('sum(bfast + lunch + dinner) as sumQuantities')->where('member_id', $member_id)->first();
 		$data['mealSum'] = $result['sumQuantities'];
-
-        $member = new UserModel();
-        $data['memberI'] = $member->where('id', $member_id)->first();
         return view('pages/reports/indivisual', $data);
     }
 
