@@ -35,44 +35,31 @@
                     </a>
                 </div>
                 <div class="login-form">
-                    <form>
-                    <div class="form-group">
-                            <label>Name</label>
-                            <input type="text" class="form-control" placeholder="name">
+                <form action="memberSignup" method="POST" enctype="multipart/form-data" class="form-horizontal">
+                        <div class="row form-group">
+                            <div class="col col-md-3"><label for="text-input" class=" form-control-label">Full Name :</label></div>
+                            <div class="col-12 col-md-9"><input type="text" id="text-input" name="name" placeholder="Enter your ful name" class="form-control"></div>
                         </div>
-                        <div class="form-group">
-                            <label>Date of Birth</label>
-                            <input type="date" class="form-control" placeholder="dob">
+                        <div class="row form-group">
+                            <div class="col col-md-3"><label for="textarea-input" class=" form-control-label">Address :</label></div>
+                            <div class="col-12 col-md-9"><textarea name="address" id="textarea-input" rows="5" placeholder="Enter your address" class="form-control"></textarea></div>
                         </div>
-                        <div class="form-group">
-                            <label>Address</label>
-                            <input type="text" class="form-control" placeholder="address">
+                        <div class="row form-group">
+                            <div class="col col-md-3"><label for="email-input" class=" form-control-label">E-mail :</label></div>
+                            <div class="col-12 col-md-9"><input type="email" id="email-input" name="email" placeholder="Please enter your email address" class="form-control"></div>
                         </div>
-                        <div class="form-group">
-                            <label>User Name</label>
-                            <input type="email" class="form-control" placeholder="username">
+                        <div class="row form-group">
+                            <div class="col col-md-3"><label for="mobile-input" class=" form-control-label">Contact Number :</label></div>
+                            <div class="col-12 col-md-9"><input type="text" id="mobile-input" name="mobile" placeholder="Please enter your contact number" class="form-control"></div>
                         </div>
-                        <div class="form-group">
-                            <label>Email address</label>
-                            <input type="email" class="form-control" placeholder="email">
+                        <div class="row form-group">
+                            <div class="col col-md-3"><label for="password-input" class=" form-control-label">Password :</label></div>
+                            <div class="col-12 col-md-9"><input type="password" id="password-input" name="password" placeholder="Please enter a complex password" class="form-control"></div>
                         </div>
-                        <div class="form-group">
-                            <label>Password</label>
-                            <input type="password" class="form-control" placeholder="password">
-                        </div>
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox"> Agree the terms and policy.
-                            </label>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-flat m-b-30 m-t-30">SignUp</button>
-                        <div class="social-login-content">
-                            <div class="social-button">
-                                <button type="button" class="btn social facebook btn-flat btn-addon mb-3"><i class="ti-facebook"></i>Register with facebook</button>
-                            </div>
-                        </div>
-                        <div class="register-link m-t-15 text-center">
-                            <p>Already have account ? <a href="login"> Login</a></p>
+                        <div class="card-footer">
+                            <button type="submit" class="btn btn-primary btn-sm">
+                                    <i class="fa fa-dot-circle-o"></i> <strong>Submit</strong>
+                            </button>
                         </div>
                     </form>
                 </div>

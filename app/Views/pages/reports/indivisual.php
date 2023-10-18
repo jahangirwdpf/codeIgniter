@@ -41,60 +41,41 @@
                                 <table id="bootstrap-data-table" class="table table-striped table-bordered">
                                     <thead>
                                         <tr class="text-center">
-                                            <th>Member Name</th>
+                                            <th><h3> <strong> Member Name : &nbsp; &nbsp; <?= $memberI['name'] ?> </strong> </h3></th>
                                         </tr>
                                     </thead>
-                                    <tbody>
-                                        <tr class="text-center">
-                                            <?= '' ?>
-                                        </tr>
-                                    </tbody>
                                 </table>
-
-<<<<<<< HEAD
-=======
-                        
-
-
-
-                            <div class="card-body">
->>>>>>> fe8e07f1a35eb79767973f7049d1b7aeb3f795e0
                                 <table id="bootstrap-data-table" class="table table-striped table-bordered">
                                     <thead>
-                                    
                                         <tr class="text-center">
-                                            <th>Meal</th>
-                                            <th>Meal Cost</th>
-                                            <th>House Rent</th>
+                                            <th>Meal : &nbsp; &nbsp; <?= $meal_I ?></th>
                                         </tr>
                                     </thead>
-                                    <tbody>
-                                        <tr class="text-center">
-<<<<<<< HEAD
-                                            <td><?= $meal_I ?></td>
-                                            <td><?= ($purSum/$mealSum) * $meal_I ?></td>
-                                            <td><?= ($rentSum + $depSum)/$memberSum ?></td>
-=======
-                                            <td><?= $mealSum ?></td>
-                                            <td></td>
-                                            <td></td>
->>>>>>> fe8e07f1a35eb79767973f7049d1b7aeb3f795e0
-                                        </tr>
-                                    </tbody>
                                     <thead>
                                         <tr class="text-center">
-                                            <th>Total Cost</th>
-                                            <th>Deposite + Purchase</th>
-                                            <th>Due</th>
+                                            <th>Meal Cost : &nbsp; &nbsp; <?= ($purSum/$mealSum) * $meal_I ?> </th>
                                         </tr>
                                     </thead>
-                                    <tbody>
+                                    <thead>
                                         <tr class="text-center">
-                                            <td><?= ($purSum/$mealSum) * $meal_I + ($rentSum + $depSum)/$memberSum ?></td>
-                                            <td><?= ($dep_I + $pur_I) ?></td>
-                                            <td><?= ($purSum/$mealSum) * $meal_I + (($rentSum + $depSum)/$memberSum) - ($dep_I + $pur_I) ?></td>
+                                            <th>House Rent : &nbsp; &nbsp; <?= ($rentSum + $depSum)/$memberSum ?></th>
                                         </tr>
-                                    </tbody>
+                                    </thead>
+                                    <thead>
+                                        <tr class="text-center">
+                                            <th>Total Cost : &nbsp; &nbsp; <?= ($purSum/$mealSum) * $meal_I + ($rentSum + $depSum)/$memberSum ?></th>
+                                        </tr>
+                                    </thead>
+                                    <thead>
+                                        <tr class="text-center">
+                                            <th>Deposite + Purchase : &nbsp; &nbsp; <?= ($dep_I + $pur_I) ?></th>
+                                        </tr>
+                                    </thead>
+                                    <thead>
+                                        <tr class="text-center">
+                                            <th>Due : &nbsp; &nbsp; <?= ($purSum/$mealSum) * $meal_I + (($rentSum + $depSum)/$memberSum) - ($dep_I + $pur_I) ?></th>
+                                        </tr>
+                                    </thead>
                                 </table>
                             </div>
                         </div>
