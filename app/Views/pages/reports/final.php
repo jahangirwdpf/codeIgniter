@@ -41,7 +41,7 @@
                                 <table id="bootstrap-data-table" class="table table-striped table-bordered">
                                     <thead>
                                         <tr class="text-center">
-                                            <th> <strong> Name : &nbsp; &nbsp; <?= $memberI['name'] ?> </strong> </th>
+                                            <th><h3> <strong> Name : &nbsp; &nbsp; <?= $memberI['name'] ?> </strong> </h3></th>
                                         </tr>
                                     </thead>
                                 </table>
@@ -49,7 +49,7 @@
                                     <thead>
                                         <tr class="text-center">
                                             <th style="width:50%">Meal </th>
-                                            <th style="width:50%">&nbsp; &nbsp; <?= round($meal_I) ?></th>
+                                            <th style="width:50%">&nbsp; &nbsp; <?= round( $meal_I )?></th>
                                         </tr>
                                     </thead>
                                     <thead>
@@ -84,11 +84,24 @@
                                     </thead>
                                     <thead>
                                         <tr class="text-center">
-                                        <th style="width:50%"></th>
-                                            <th style="width:50%"><a href="<?= base_url() ?>payAdd" class=" btn btn-primary" > payment</a></th>
+                                        <th style="width:50%">Payment </th>
+                                            <th style="width:50%">&nbsp; &nbsp; <?= round($pay_I) ?></th>
+                                        </tr>
+                                    </thead>
+                                    <thead>
+                                        <tr class="text-center">
+                                        <th style="width:50%"> Net Due </th>
+                                            <th style="width:50%">&nbsp; &nbsp; <?= round(($purSum/$mealSum) * $meal_I + (($rentSum + $depSum)/$memberSum) - ($dep_I + $pur_I) - $pay_I) ?></th>
+                                        </tr>
+                                    </thead>
+                                    <thead>
+                                        <tr class="text-center">
+                                            <th style="width:50%">Status </th>
+                                            <th style="width:50%">&nbsp; &nbsp; <?= 'Paid' ?></th>
                                         </tr>
                                     </thead>
                                 </table>
+                                <a href="#" class=" btn btn-primary mx-2" onclick="window.print()" > Print</a>
                             </div>
                         </div>
                     </div>
@@ -99,6 +112,7 @@
 
     <script>
      function printpage(){
+        e.preventDefault();
             var body = document.getElementById('body').innerHTML;
             var data = document.getElementById('data').innerHTML;
             document.getElementById('body').innerHTML=data;

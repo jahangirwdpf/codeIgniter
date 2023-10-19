@@ -72,7 +72,7 @@
                     </li>
                     <li class="menu-title">Members</li><!--------- /.menu-title --------->
                     <li>
-                        <a href="memberAdd"> <i class="menu-icon fa fa-plus"></i>Add </a>
+                        <a href="memberAdd"> <i class="menu-icon fa fa-plus"></i>Add  <?= session()->get('isLoggedIn')?></a>
                     </li>
                     <li>
                         <a href="<?= base_url() ?>memberView"> <i class="menu-icon fa fa-users"></i>Total Member </a>
@@ -126,7 +126,7 @@
             <div class="top-left">
                 <div class="navbar-header">
                     <a class="navbar-brand" href="./"><img src="<?= base_url(); ?>images/bp-1.png" alt="Logo"></a>
-                    <a class="navbar-brand hidden" href="./"><img src="<?= base_url(); ?>images/logo2.png" alt="Logo"></a>
+                    <a class="navbar-brand hidden" href="./"><img src="<?= base_url(); ?>images/logo2.png" alt="Logo"> </a>
                     <a id="menuToggle" class="menutoggle"><i class="fa fa-bars"></i></a>
                 </div>
             </div>
@@ -221,7 +221,7 @@
                         <div class="user-menu dropdown-menu">
                             <a class="nav-link" href="#"><i class="fa fa- user"></i>S M Jahangir Alam</a>
                             <a class="nav-link" href="#"><i class="fa fa -cog"></i>Settings</a>
-                            <a class="nav-link" href="./"><i class="fa fa-power -off"></i>Logout</a>
+                            <a class="nav-link" href="<?= base_url() ?>logout"><i class="fa fa-power -off"></i>Logout</a>
                         </div>
                     </div>
                 </div>

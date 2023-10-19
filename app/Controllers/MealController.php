@@ -10,6 +10,7 @@ class MealController extends BaseController
     {
         $user = new UserModel;
         $data['member'] = $user->orderBy('id', 'DESC')->findAll();
+        
         return view('pages/meal/mealAdd',$data);
     }
 

@@ -72,4 +72,13 @@ class MemberController extends BaseController
 
         return redirect('memberView', $data);
     }
+
+
+    // View All
+    public function fetchmem()
+    {
+        $member = new UserModel();
+        $data['member'] = $member->orderBy('id', 'DESC')->findAll();
+        return view('pages/reports/abc', $data);
+    }
 }

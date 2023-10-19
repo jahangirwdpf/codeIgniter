@@ -9,7 +9,7 @@
                         <div class="card-body text-center">
                             <div class="stat-widget-five">
                                 <div class="stat-icon dib flat-color-1">
-                                    <i class="fa fa-users"></i>
+                                    <i class="pe-7s-paint-bucket"></i>
                                 </div>
                                 <div class="stat-content">
                                     <div class="text-center dib">
@@ -31,7 +31,7 @@
                         <div class="card-body text-center">
                             <div class="stat-widget-five">
                                 <div class="stat-icon dib flat-color-2">
-                                    <i class="pe-7s-paint-bucket"></i>
+                                    <i class="fa fa-money"></i>
                                 </div>
                                 <div class="stat-content">
                                     <div class="text-center dib">
@@ -97,7 +97,7 @@
                         <div class="card-body">
                             <div class="stat-widget-five">
                                 <div class="stat-icon dib flat-color-3">
-                                    <i class="pe-7s-cup"></i>
+                                    <i class="fa fa-briefcase"></i>
                                 </div>
                                 <div class="stat-content">
                                     <div class="text-left dib">

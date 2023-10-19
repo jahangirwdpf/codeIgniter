@@ -1,16 +1,19 @@
 <?php
 use CodeIgniter\Router\RouteCollection;
+use App\Filters\AuthGuard;
 /**
  * @var RouteCollection $routes
  */
 // Forntend Routes
 $routes->get('/', 'HomeController::index');
 $routes->get('login', 'Login::index');
+$routes->get('ulogin', 'Login::loginAuth');
 $routes->get('footer', 'HomeController::footer');
 $routes->get('signUp', 'Login::signUp');
 $routes->get('about', 'HomeController::about');
 $routes->get('gallery', 'HomeController::gallery');
 $routes->get('contact', 'HomeController::contact'); 
+$routes->get('logout', 'Login::logout');
 
 // Backend Routes
 $routes->get('dashboard', 'DashboardController::index');
@@ -58,5 +61,13 @@ $routes->put('meal/update/(:num)', 'MealController::update/$1');
 // Reports Routes
 $routes->get('reportS', 'ReportsController::index');
 $routes->get('report/(:num)', 'ReportsController::Edit/$1');
-$routes->get('abc', 'ReportsController::abc');
+$routes->get('finalReport/(:num)', 'ReportsController::Abc/$1');
+$routes->get('abc', 'MemberController::fetchmember');
+$routes->get('final', 'MemberController::fetchmem');
+
+// Reports Routes
+$routes->get('payAdd', 'PayController::index');
+$routes->post('payAdd', 'PayController::payAdd');
+$routes->get('bazarView', 'PayController::fetchpay');
+
 

@@ -9,6 +9,13 @@ use App\Models\RentModel;
 
 class DashboardController extends BaseController
 {
+
+    // public function __construct(){
+    //     if(session()->get('isLoggedIn')!==TRUE){
+    //         return redirect()->to('/login');
+    //     }
+    // }
+
     public function index()
     {
         $member = new UserModel();
