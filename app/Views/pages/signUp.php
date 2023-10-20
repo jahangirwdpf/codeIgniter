@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Ela Admin - HTML5 Admin Template</title>
+    <title>Bachelor Point</title>
     <meta name="description" content="Ela Admin - HTML5 Admin Template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -61,6 +61,9 @@
                                     <i class="fa fa-dot-circle-o"></i> <strong>Submit</strong>
                             </button>
                         </div>
+                        <div class="register-link m-t-15 text-center">
+                            <p>Already have account ? &nbsp <a href="<?= base_url() ?>login"> Please Login</a></p>
+                        </div>
                     </form>
                 </div>
             </div>
@@ -72,6 +75,5 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery-match-height@0.7.2/dist/jquery.matchHeight.min.js"></script>
     <script src="assets/js/main.js"></script>
-
 </body>
 </html>

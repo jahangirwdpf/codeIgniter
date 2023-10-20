@@ -72,7 +72,7 @@
                     </li>
                     <li class="menu-title">Members</li><!--------- /.menu-title --------->
                     <li>
-                        <a href="memberAdd"> <i class="menu-icon fa fa-plus"></i>Add  <?= session()->get('isLoggedIn')?></a>
+                        <a href="memberAdd"> <i class="menu-icon fa fa-plus"></i>Add</a>
                     </li>
                     <li>
                         <a href="<?= base_url() ?>memberView"> <i class="menu-icon fa fa-users"></i>Total Member </a>

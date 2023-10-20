@@ -29,14 +29,14 @@
                     </a>
                 </div>
                 <div class="login-form">
-                    <form action="<?= base_url() ?>ulogin">
+                    <form action="<?= base_url() ?>user_login">
                         <div class="form-group">
                             <label>Email address</label>
-                            <input type="email" class="form-control" placeholder="Email" name="email">
+                            <input type="email" class="form-control" placeholder="please enter a email" name="email">
                         </div>
                         <div class="form-group">
                             <label>Password</label>
-                            <input type="password" class="form-control" placeholder="Password" name="password"> 
+                            <input type="password" class="form-control" placeholder="please enter currect password" name="password"> 
                         </div>
                         <div class="checkbox">
                             <label>
@@ -46,14 +46,14 @@
                                 <a href="#">Forgotten Password?</a>
                             </label>
                         </div>
-                        <button type="submit" class="btn btn-success btn-flat m-b-30 m-t-30">Sign in</button>
+                        <button type="submit" class="btn btn-success btn-flat m-b-30 m-t-30">Login</button>
                         <div class="social-login-content">
                             <div class="social-button">
                                 <button type="button" class="btn social facebook btn-flat btn-addon mb-3"><i class="ti-facebook"></i>Sign in with facebook</button>
                             </div>
                         </div>
                         <div class="register-link m-t-15 text-center">
-                            <p>Don't have account ? <a href="<?= base_url() ?>signUp"> Sign Up Here !</a></p>
+                            <p>Don't have account ? &nbsp<a href="<?= base_url() ?>signUp"> Sign Up Here !</a></p>
                         </div>
                     </form>
                 </div>

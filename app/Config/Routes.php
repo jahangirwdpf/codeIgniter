@@ -4,16 +4,19 @@ use App\Filters\AuthGuard;
 /**
  * @var RouteCollection $routes
  */
+
 // Forntend Routes
 $routes->get('/', 'HomeController::index');
-$routes->get('login', 'Login::index');
-$routes->get('ulogin', 'Login::loginAuth');
 $routes->get('footer', 'HomeController::footer');
-$routes->get('signUp', 'Login::signUp');
 $routes->get('about', 'HomeController::about');
 $routes->get('gallery', 'HomeController::gallery');
 $routes->get('contact', 'HomeController::contact'); 
-$routes->get('logout', 'Login::logout');
+
+// Login For Backend
+$routes->get('login', 'LoginController::index');
+$routes->get('user_login', 'LoginController::loginAuth');
+$routes->get('signUp', 'LoginController::signUp');
+$routes->get('logout', 'LoginController::logout');
 
 // Backend Routes
 $routes->get('dashboard', 'DashboardController::index');
@@ -65,9 +68,9 @@ $routes->get('finalReport/(:num)', 'ReportsController::Abc/$1');
 $routes->get('abc', 'MemberController::fetchmember');
 $routes->get('final', 'MemberController::fetchmem');
 
-// Reports Routes
+// Payment Routes
 $routes->get('payAdd', 'PayController::index');
 $routes->post('payAdd', 'PayController::payAdd');
-$routes->get('bazarView', 'PayController::fetchpay');
+$routes->get('payView', 'PayController::fetchpay');
 
 

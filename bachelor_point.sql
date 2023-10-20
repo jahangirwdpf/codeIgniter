@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 17, 2023 at 09:19 PM
+-- Generation Time: Oct 19, 2023 at 10:37 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -104,7 +104,9 @@ INSERT INTO `meal` (`m_id`, `date`, `bfast`, `lunch`, `dinner`, `member_id`) VAL
 (27, '2023-10-15', 1, 1, 1, 3),
 (28, '2023-10-15', 1, 1, 1, 2),
 (29, '2023-10-15', 1, 1, 1, 1),
-(30, '2023-10-16', 0, 1, 0, 1);
+(30, '2023-10-16', 0, 1, 0, 1),
+(31, '2023-10-18', 1, 2, 3, 11),
+(32, '2023-10-18', 0, 3, 1, 12);
 
 -- --------------------------------------------------------
 
@@ -131,7 +133,28 @@ INSERT INTO `member` (`id`, `name`, `address`, `email`, `mobile`, `password`, `r
 (2, 'Noman', ' Chandpur', 'noman@gmail.com', '01842436222', 'n111', 0),
 (3, 'Rana', ' Nowakhali', 'rana@gmail.com', '01700887141', 'r111', 0),
 (4, 'Ratul', ' Patuakhali', 'ratul@yahoo.com', '01319657634', 'rt111', 0),
-(5, 'Shadin', 'Patuakhali', 'shadin@gmail.com', '01717075957', 's111', 0);
+(5, 'Shadin', 'Patuakhali', 'shadin@gmail.com', '01717075957', 's111', 0),
+(12, 'Shariful Hauqe', 'Savar', 's@gmail.com', '01727280318', 's1', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pay`
+--
+
+CREATE TABLE `pay` (
+  `pm_id` int(11) NOT NULL,
+  `member_id` int(11) NOT NULL,
+  `amount` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `pay`
+--
+
+INSERT INTO `pay` (`pm_id`, `member_id`, `amount`) VALUES
+(2, 5, 3666),
+(3, 12, 3070);
 
 -- --------------------------------------------------------
 
@@ -157,7 +180,10 @@ INSERT INTO `purchese` (`p_id`, `date`, `member_id`, `p_des`, `price`) VALUES
 (5, '2023-10-10', 4, 'Fish', 750),
 (6, '2023-10-10', 1, 'Rice', 800),
 (7, '2023-10-17', 3, 'Meat', 1500),
-(8, '2023-10-17', 1, 'Fish', 645);
+(8, '2023-10-17', 1, 'Fish', 645),
+(9, '2023-10-18', 1, 'Meat', 1560),
+(10, '2023-10-18', 12, 'biri', 1250),
+(11, '2023-10-18', 5, 'Meat', 500);
 
 -- --------------------------------------------------------
 
@@ -207,6 +233,12 @@ ALTER TABLE `member`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `pay`
+--
+ALTER TABLE `pay`
+  ADD PRIMARY KEY (`pm_id`);
+
+--
 -- Indexes for table `purchese`
 --
 ALTER TABLE `purchese`
@@ -238,19 +270,25 @@ ALTER TABLE `house_rent`
 -- AUTO_INCREMENT for table `meal`
 --
 ALTER TABLE `meal`
-  MODIFY `m_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `m_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- AUTO_INCREMENT for table `member`
 --
 ALTER TABLE `member`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
+--
+-- AUTO_INCREMENT for table `pay`
+--
+ALTER TABLE `pay`
+  MODIFY `pm_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `purchese`
 --
 ALTER TABLE `purchese`
-  MODIFY `p_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `p_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `role`

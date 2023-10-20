@@ -73,7 +73,6 @@ class MemberController extends BaseController
         return redirect('memberView', $data);
     }
 
-
     // View All
     public function fetchmem()
     {

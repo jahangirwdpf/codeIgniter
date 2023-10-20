@@ -1,15 +1,14 @@
 <?php
-
 namespace App\Controllers;
 use App\Models\UserModel;
 
-class Login extends BaseController
-
+class LoginController extends BaseController
 {
     public function index()
     {
         return view('pages/login');
     }
+
     public function loginAuth()
     {
         $session = session();
@@ -20,28 +19,26 @@ class Login extends BaseController
         $data = $userModel->where('email', $email)->first();
         if($data){
             $pass = $data['password'];
-            // $authenticatePassword = password_verify($password, $pass);
+            $authenticatePassword = password_verify($password, $pass);
             if($pass == $password){
                 $ses_data = [
-                    // 'id' => $data['id'],
-                    // 'name' => $data['name'],
-                    // 'email' => $data['email'],
+                    'id' => $data['id'],
+                    'name' => $data['name'],
+                    'email' => $data['email'],
                     'isLoggedIn' => TRUE
                 ];
                 $session->set($ses_data);
                 return redirect()->to('dashboard');
-            
             }else{
                 $session->setFlashdata('msg', 'Password is incorrect.');
                 return redirect()->to('/login');
-                // echo "Password is incorrect";
+                echo "Password is incorrect";
             }
         }else{
             $session->setFlashdata('msg', 'Email does not exist.');
             return redirect()->to('/login');
-            // echo "Email does not exist.";
+            echo "Email does not exist.";
         }
-
         return view('Backend/dashboard');
     }
 
