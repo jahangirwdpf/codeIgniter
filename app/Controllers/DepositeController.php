@@ -31,7 +31,7 @@ Class DepositeController extends BaseController {
     public function fetchdep()
     {
         $view = new DepositeModel();
-        $data['deposite'] = $view->orderBy('d_id', 'DESC')->findAll();
+        $data['deposite'] = $view->join('member','member.id = deposite.member_id')->orderBy('d_id', 'DESC')->findAll();
         return view('pages/deposite/depView', $data);
     }
 

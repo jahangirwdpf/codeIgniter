@@ -58,7 +58,7 @@
                                                 <tr>
                                                     <td><?= $row['m_id']?></td>
                                                     <td><?= $row['date']?></td>
-                                                    <td><?= $row['member_id'] ?></td>
+                                                    <td><?= $row['name'] ?></td>
                                                     <td><?= $row['bfast']?></td>
                                                     <td><?= $row['lunch']?></td>
                                                     <td><?= $row['dinner']?></td>

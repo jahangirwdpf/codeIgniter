@@ -56,7 +56,7 @@
                                                 <tr>
                                                     <td><?= $row['p_id']?></td>
                                                     <td><?= $row['date']?></td>
-                                                    <td> <?= $members['name'] ?></td>
+                                                    <td> <?= $row['name'] ?></td>
                                                     <td><?= $row['p_des']?></td>
                                                     <td><?= $row['price']?></td>
                                                     <td class="text-center"><a href="<?= base_url() ?>bazar/edit/<?= $row['p_id']?>" class="btn btn-success"><i class="fa fa-pencil"></i></a</td>

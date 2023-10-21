@@ -55,7 +55,7 @@
                                                 <tr>
                                                     <td><?= $row['d_id'] ?></td>
                                                     <td><?= $row['date'] ?></td>
-                                                    <td><?= $row['member_id'] ?></td>
+                                                    <td><?= $row['name'] ?></td>
                                                     <td><?= $row['deposite'] ?></td>
                                                     <td><?= $row['price'] ?></td>
                                                     <td class="text-center"><a href="deposite/edit/<?= $row['d_id'] ?>" class='btn btn-success'><i class="fa fa-pencil"></i></a></td>

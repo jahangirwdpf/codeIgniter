@@ -18,8 +18,8 @@ class PurcheseController extends BaseController
         $signUp = new PurcheseModel();
         $data = 
         [
-            'member_name'=>$this->request->getPost('member_name'),
             'date'=>$this->request->getPost('date'),
+            'member_id'=>$this->request->getPost('member_id'),
             'p_des'=>$this->request->getPost('p_des'),
             'price'=>$this->request->getPost('price'),
         ];
@@ -30,11 +30,10 @@ class PurcheseController extends BaseController
     //View All Data
     public function fetchbazar()
     {
-        $user = new UserModel;
-        $data['members'] = $user->join('purchese','member.id = purchese.member_id')->orderBy('id', 'DESC')->first();
+        
 
         $view = new PurcheseModel();
-        $data['bazar'] = $view->orderBy('p_id', 'DESC')->findAll();
+        $data['bazar'] = $view->join('member','member.id = purchese.member_id')->orderBy('p_id', 'DESC')->findAll();
         return view('pages/bazar/bazarView', $data);
     }
 
@@ -60,8 +59,8 @@ class PurcheseController extends BaseController
         $update=  new PurcheseModel();
         $data = 
         [
-            'member_name'=>$this->request->getPost('member_name'),
             'date'=>$this->request->getPost('date'),
+            'member_id'=>$this->request->getPost('member_id'),
             'p_des'=>$this->request->getPost('p_des'),
             'price'=>$this->request->getPost('price'),
         ];

@@ -34,7 +34,7 @@ class MealController extends BaseController
     public function fetchmeal()
     {
         $view = new MealModel();
-        $data['meal'] = $view->orderBy('m_id', 'DESC')->findAll();
+        $data['meal'] = $view->join('member','member.id = meal.member_id')->orderBy('m_id', 'DESC')->findAll();
         return view('pages/meal/mealView', $data);
 
         $meal = new MealModel();
