@@ -18,6 +18,7 @@ class PayController extends BaseController
         $signUp = new PayModel();
         $data = 
         [
+            'date'=>$this->request->getPost('date'),
             'member_id'=>$this->request->getPost('member_id'),
             'amount'=>$this->request->getPost('amount'),
         ];
@@ -29,38 +30,37 @@ class PayController extends BaseController
     public function fetchpay()
     {
         $view = new PayModel();
-        $data['pay'] = $view->orderBy('pm_id', 'DESC')->findAll();
+        $data['pay'] = $view->join('member','member.id = pay.member_id')->orderBy('pm_id', 'DESC')->findAll();
         return view('pages/payment/payView', $data);
     }
 
     //Delete data
-    public function delete($product_id = null)
+    public function delete($pay_id = null)
     {
         $view = new PayModel();
-        $view->delete($product_id);
-        return redirect('bazarView');
+        $view->delete($pay_id);
+        return redirect('payView');
     }
 
     //Edit Data
-    public function Edit($product_id = null)
+    public function Edit($pay_id = null)
     {
         $view = new PayModel();
-        $data['bazar'] = $view->where('p_id', $product_id)->first();
-        return view('pages/bazar/bazarEdit', $data);
+        $data['pay'] = $view->where('pm_id', $pay_id)->first();
+        return view('pages/payment/payEdit', $data);
     }
 
     //Update Data
-    public function update($product_id = null)
+    public function update($pay_id = null)
     {
-        $update=  new PurcheseModel();
+        $update=  new PayModel();
         $data = 
         [
-            'member_id'=>$this->request->getPost('member_id'),
             'date'=>$this->request->getPost('date'),
-            'p_des'=>$this->request->getPost('p_des'),
-            'price'=>$this->request->getPost('price'),
+            'member_id'=>$this->request->getPost('member_id'),
+            'amount'=>$this->request->getPost('amount'),
         ];
-        $update->update($product_id, $data);
-        return redirect('bazarView');
+        $update->update($pay_id, $data);
+        return redirect('payView');
     }
 }

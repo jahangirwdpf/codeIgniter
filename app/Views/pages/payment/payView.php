@@ -19,8 +19,8 @@
                         <div class="page-title">
                             <ol class="breadcrumb text-right">
                                 <li><a href="#">Dashboard</a></li>
-                                <li><a href="#">Deposite</a></li>
-                                <li class="active">View Deposite History</li>
+                                <li><a href="#">All Payment</a></li>
+                                <li class="active">View Payment History</li>
                             </ol>
                         </div>
                     </div>
@@ -36,7 +36,7 @@
                     <div class="col-md-12">
                         <div class="card">
                             <div class="card-header">
-                                <strong class="card-title">Purchase Information (Details)</strong>
+                                <strong class="card-title">Payment Information (Details)</strong>
                             </div>
                             <div class="card-body">
                                 <table id="bootstrap-data-table" class="table table-striped table-bordered">
@@ -45,22 +45,20 @@
                                             <th>ID</th>
                                             <th>Date</th>
                                             <th>Member Name</th>
-                                            <th>Product Description</th>
-                                            <th>Price</th>
+                                            <th>Amount</th>
                                             <th colspan='2' >Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <?php if ($bazar) :?>
-                                            <?php foreach ($bazar as $row) :?>
+                                        <?php if ($pay) :?>
+                                            <?php foreach ($pay as $row) :?>
                                                 <tr>
-                                                    <td><?= $row['p_id']?></td>
+                                                    <td><?= $row['pm_id']?></td>
                                                     <td><?= $row['date']?></td>
-                                                    <td><?= $row['member_id']?></td>
-                                                    <td><?= $row['p_des']?></td>
-                                                    <td><?= $row['price']?></td>
-                                                    <td class="text-center"><a href="<?= base_url() ?>bazar/edit/<?= $row['p_id']?>" class="btn btn-success"><i class="fa fa-pencil"></i></a</td>
-                                                    <td class="text-center"><a href="bazar/delete/<?= $row['p_id']?>" class="btn btn-danger"><i class="fa fa-trash"></a</td>
+                                                    <td><?= $row['name']?></td>
+                                                    <td><?= $row['amount']?></td>
+                                                    <td class="text-center"><a href="<?= base_url() ?>payment/edit/<?= $row['pm_id']?>" class="btn btn-success"><i class="fa fa-pencil"></i></a</td>
+                                                    <td class="text-center"><a href="payment/delete/<?= $row['pm_id']?>" class="btn btn-danger"><i class="fa fa-trash"></a</td>
                                                 </tr>
                                             <?php endforeach; ?>
                                         <?php endif; ?>

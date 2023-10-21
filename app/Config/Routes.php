@@ -72,5 +72,8 @@ $routes->get('final', 'MemberController::fetchmem');
 $routes->get('payAdd', 'PayController::index');
 $routes->post('payAdd', 'PayController::payAdd');
 $routes->get('payView', 'PayController::fetchpay');
+$routes->get('payment/delete/(:num)', 'PayController::delete/$1');
+$routes->get('payment/edit/(:num)', 'PayController::edit/$1');
+$routes->put('payment/update/(:num)', 'PayController::update/$1');
 
 

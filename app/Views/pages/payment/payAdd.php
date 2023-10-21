@@ -37,6 +37,14 @@
                 </div>
                 <div class="card-body card-block">
                     <form action="payAdd" method="POST" enctype="multipart1/form-data" class="form-horizontal">
+                        <div class="row form-group d-flex">
+                            <div class="col col-md-3">
+                                <label for="date-input" class=" form-control-label">Date :</label>
+                            </div>
+                            <div class="col-12 col-md-9">
+                                <input type="date" id="date-input" name="date" class="form-control">
+                            </div>
+                        </div>
                         <div class="row form-group">
                             <div class="col col-md-3"><label for="select" class=" form-control-label">Member Selection :</label></div>
                             <div class="col-12 col-md-9">

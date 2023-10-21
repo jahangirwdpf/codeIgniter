@@ -30,11 +30,14 @@
     </div>
 
     <!----------------------- Start content ------------------------------------>
-        <div class="content" id="data">
+        <div class="content">
             <div class="animated fadeIn">
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="card">
+                        <div class="text-right">
+                            <a href="#" class=" btn btn-warning mx-2" onclick="printpage()" ><i class="fa fa-print"></i></a>
+                        </div>
+                        <div class="card" id="data">
                             <div class="card-header">
                                 <strong class="card-title">Reports of (September)</strong>
                             </div>
@@ -101,7 +104,6 @@
                                         </tr>
                                     </thead>
                                 </table>
-                                <a href="#" class=" btn btn-primary mx-2" onclick="window.print()" > Print</a>
                             </div>
                         </div>
                     </div>
@@ -112,7 +114,6 @@
 
     <script>
      function printpage(){
-        e.preventDefault();
             var body = document.getElementById('body').innerHTML;
             var data = document.getElementById('data').innerHTML;
             document.getElementById('body').innerHTML=data;

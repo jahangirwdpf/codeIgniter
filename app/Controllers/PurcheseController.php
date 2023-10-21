@@ -30,8 +30,6 @@ class PurcheseController extends BaseController
     //View All Data
     public function fetchbazar()
     {
-        
-
         $view = new PurcheseModel();
         $data['bazar'] = $view->join('member','member.id = purchese.member_id')->orderBy('p_id', 'DESC')->findAll();
         return view('pages/bazar/bazarView', $data);

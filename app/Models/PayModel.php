@@ -13,7 +13,7 @@ class PayModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['pm_id', 'member_id', 'amount'];
+    protected $allowedFields    = ['pm_id', 'member_id', 'amount', 'date'];
 
     // Dates
     protected $useTimestamps = false;

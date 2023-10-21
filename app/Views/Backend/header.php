@@ -61,7 +61,7 @@
         }
     </style>
 </head>
-<body>
+<body id="body">
     <!--------------------- Left Panel ------------------------------------>
     <aside id="left-panel" class="left-panel">
         <nav class="navbar navbar-expand-sm navbar-default">
@@ -108,7 +108,7 @@
                     </li>
                     <li class="menu-title">Summary/ Reports</li><!--------- /.menu-title --------->
                     <li>
-                      <a href="<?= base_url(); ?>report"> <i class="menu-icon fa fa-print"></i>Indivisual Report </a>
+                      <a href="<?= base_url(); ?>payView"> <i class="menu-icon fa fa-print"></i>All Payment </a>
                     </li>
                     <li>
                       <a href="<?= base_url(); ?>reportS"> <i class="menu-icon fa fa-newspaper-o"></i>Monthly Summary </a>

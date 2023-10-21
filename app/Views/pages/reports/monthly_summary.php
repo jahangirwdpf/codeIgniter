@@ -113,7 +113,7 @@
                                     <thead>
                                         <tr class="text-center d-flex">
                                             <th style="width:50%">Print This Report</th>
-                                            <th style="width:50%"><a href="#" class=" btn btn-warning mx-2" onclick="window.print()" ><i class="fa fa-print"></i></a></th>
+                                            <th style="width:50%"><a href="#" class=" btn btn-warning mx-2" onclick="printpage()" ><i class="fa fa-print"></i></a></th>
                                         </tr>
                                     </thead>
                                 </table>
@@ -127,7 +127,6 @@
 
         <script>
             function printpage(){
-                e.preventDefault();
                     var body = document.getElementById('body').innerHTML;
                     var data = document.getElementById('data').innerHTML;
                     document.getElementById('body').innerHTML=data;

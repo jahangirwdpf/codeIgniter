@@ -18,8 +18,8 @@
                         <div class="page-title">
                             <ol class="breadcrumb text-right">
                                 <li><a href="#">Dashboard</a></li>
-                                <li><a href="#">Deposite</a></li>
-                                <li class="active">Edit Deposite History</li>
+                                <li><a href="#">Payment</a></li>
+                                <li class="active">Edit Payment History</li>
                             </ol>
                         </div>
                     </div>
@@ -32,26 +32,22 @@
     <div class="col-lg-11 float-left p-3 3 mx-5 ">
             <div class="card justify-content-center">
                 <div class="card-header">
-                    <strong>Deposite Information</strong>
+                    <strong>Payment Information</strong>
                 </div>
                 <div class="card-body card-block">
-                    <form action="<?= base_url(); ?>bazar/update/<?= $bazar['p_id'] ?>" method="POST" enctype="multipart/form-data" class="form-horizontal">
+                    <form action="<?= base_url(); ?>payment/update/<?= $pay['pm_id'] ?>" method="POST" enctype="multipart/form-data" class="form-horizontal">
                         <div class="col-12 col-md-9"><input type="hidden" id="text-input" name="_method" value="PUT" class="form-control"></div>
                             <div class="row form-group">
                                 <div class="col col-md-3"><label for="date-input" class=" form-control-label">Date :</label></div>
-                                <div class="col-12 col-md-9"><input type="date" id="date-input" name="date" value="<?= $bazar['date'] ?>" class="form-control"></div>
+                                <div class="col-12 col-md-9"><input type="date" id="date-input" name="date" value="<?= $pay['date'] ?>" class="form-control"></div>
                             </div>
                             <div class="row form-group">
                                 <div class="col col-md-3"><label for="date-input" class=" form-control-label">Member :</label></div>
-                                <div class="col-12 col-md-9"><input type="text" id="text-input" name="member_id" value="<?= $bazar['member_id'] ?>" class="form-control"></div>
+                                <div class="col-12 col-md-9"><input type="text" id="text-input" name="member_id" value="<?= $pay['member_id'] ?>" class="form-control"></div>
                             </div>
                             <div class="row form-group">
-                                <div class="col col-md-3"><label for="p_des-input" class=" form-control-label">Product Description :</label></div>
-                                <div class="col-12 col-md-9"><input type="text" id="p_des-input" name="p_des" value="<?= $bazar['p_des'] ?>" class="form-control"></div>
-                            </div>
-                            <div class="row form-group">
-                                <div class="col col-md-3"><label for="price-input" class=" form-control-label">Price :</label></div>
-                                <div class="col-12 col-md-9"><input type="text" id="price-input" name="price" value="<?= $bazar['price'] ?>" class="form-control"></div>
+                                <div class="col col-md-3"><label for="amount-input" class=" form-control-label">Amount :</label></div>
+                                <div class="col-12 col-md-9"><input type="text" id="amount-input" name="amount" value="<?= $pay['amount'] ?>" class="form-control"></div>
                             </div>
                             <div class="card-footer">
                                 <button type="submit" class="btn btn-primary btn-sm">
